@@ -1,0 +1,692 @@
+/*
+Professional Theme for Mudanzas Edyta London Limited
+Brand Colors: Orange (#F97316) with professional styling
+Preserves all existing IDs and functionality
+
+DOM Elements Styled (no structure changes):
+- Existing header, hero, calculator sections
+- All form inputs with existing IDs (pickupAddress, destinationAddress, miles, etc.)
+- Route display elements (#routeMap, #routeInfo, #routeDetails)
+- Booking form (#bookingForm)
+- All buttons and interactive elements
+*/
+
+/* ==================== CSS CUSTOM PROPERTIES ==================== */
+:root {
+  /* Brand Colors (from your brand palette) */
+  --brand: #F97316;           /* PRIMARY */
+  --brand-700: #C2410C;       /* PRIMARY_DARK */
+  --brand-accent: #F59E0B;    /* ACCENT */
+  --bg: #FFFFFF;              /* BACKGROUND */
+  --ink: #0F172A;             /* TEXT */
+  
+  /* Extended Design Tokens */
+  --muted: #64748B;
+  --border: #E2E8F0;
+  --border-light: #F1F5F9;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  
+  /* Spacing Scale */
+  --space-xs: 0.25rem;        /* 4px */
+  --space-sm: 0.5rem;         /* 8px */
+  --space-md: 1rem;           /* 16px */
+  --space-lg: 1.5rem;         /* 24px */
+  --space-xl: 2rem;           /* 32px */
+  --space-2xl: 3rem;          /* 48px */
+  --space-3xl: 4rem;          /* 64px */
+  
+  /* Typography Scale */
+  --text-xs: 0.75rem;         /* 12px */
+  --text-sm: 0.875rem;        /* 14px */
+  --text-base: 1rem;          /* 16px */
+  --text-lg: 1.125rem;        /* 18px */
+  --text-xl: 1.25rem;         /* 20px */
+  --text-2xl: 1.5rem;         /* 24px */
+  --text-3xl: 1.875rem;       /* 30px */
+  --text-4xl: 2.25rem;        /* 36px */
+  --text-5xl: 3rem;           /* 48px */
+  
+  /* Layout */
+  --container: 1200px;
+  --section: 6rem;            /* 96px vertical padding */
+  --radius: 0.75rem;          /* 12px */
+  --radius-sm: 0.375rem;      /* 6px */
+  --radius-lg: 1rem;          /* 16px */
+  
+  /* Shadows */
+  --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+  
+  /* Typography */
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Transitions */
+  --transition: all 0.2s ease;
+  --transition-fast: all 0.15s ease;
+  --transition-slow: all 0.3s ease;
+}
+
+/* ==================== GLOBAL RESETS & TYPOGRAPHY ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+  font-size: 16px;
+}
+
+/* Typography Scale */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--ink);
+}
+
+h1 { font-size: 3.5rem; letter-spacing: -0.025em; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.875rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1.125rem; }
+
+p {
+  margin-bottom: 1rem;
+  color: var(--muted);
+}
+
+/* Links */
+a {
+  color: var(--brand);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--brand-700);
+}
+
+/* ==================== LAYOUT CONTAINERS ==================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 6rem 0;
+}
+
+/* ==================== HEADER STYLING ==================== */
+header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1rem 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.main-nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--brand);
+  border-bottom-color: var(--brand);
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero {
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-700) 100%);
+  color: white;
+  text-align: center;
+  padding: 8rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.375rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 3rem;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-logo {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.hero-logo img {
+  height: 80px;
+  width: auto;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+}
+
+/* ==================== BUTTONS ==================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 140px;
+  font-family: var(--font-body);
+}
+
+.btn-primary {
+  background: var(--brand);
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+  background: var(--brand-700);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+  color: white;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+  transform: translateY(-1px);
+  color: white;
+}
+
+/* Special buttons */
+.whatsapp-btn {
+  background: #25D366;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow);
+}
+
+.whatsapp-btn:hover {
+  background: #20B858;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+.booking-btn {
+  background: var(--brand);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow);
+}
+
+.booking-btn:hover {
+  background: var(--brand-700);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ==================== SECTIONS ==================== */
+.calculator {
+  background: #FAFBFC;
+  padding: 5rem 0;
+}
+
+/* ==================== CARDS & PANELS ==================== */
+.calc-container,
+.card,
+.panel,
+.quote-box,
+#bookingForm {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) * 2);
+  box-shadow: var(--shadow-lg);
+  padding: 3rem;
+  margin-bottom: 2rem;
+}
+
+.calc-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Booking Form Enhancements */
+#bookingSection {
+  background-color: #f8f9fa;
+  padding: 4rem 0;
+}
+
+#bookingSection .container > div {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#bookingSection h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+#bookingSection .input-group {
+  margin-bottom: 1.5rem;
+}
+
+#bookingSection .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.calc-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.calc-title h2 {
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+}
+
+.calc-title p {
+  color: var(--muted);
+  font-size: 1.125rem;
+}
+
+/* ==================== FORMS & INPUTS ==================== */
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  background-color: white;
+  transition: all 0.2s ease;
+  font-family: var(--font-body);
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 10%, transparent);
+}
+
+.input-group input:hover,
+.input-group select:hover,
+.input-group textarea:hover {
+  border-color: var(--muted);
+}
+
+/* Readonly inputs */
+.input-group input[readonly] {
+  background-color: #F8FAFC;
+  color: var(--muted);
+}
+
+/* ==================== CALC GRID & LAYOUT ==================== */
+.calc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.calc-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* ==================== QUOTE BREAKDOWN ==================== */
+.calc-result {
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-700) 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: calc(var(--radius) * 2);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.calc-result h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  color: white;
+}
+
+.breakdown {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.breakdown div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 0.9375rem;
+  color: var(--ink);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.total {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 1.5rem 0;
+  color: white;
+  text-align: center;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: calc(var(--radius) * 1.5);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+/* ==================== MAP & ROUTE INFO ==================== */
+#routeMap {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin: 1rem 0;
+}
+
+#routeInfo {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin: 1rem 0;
+  box-shadow: var(--shadow);
+}
+
+#routeDetails {
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+#milesText {
+  display: inline-block;
+  background: var(--ink);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0.25rem 0;
+}
+
+/* ==================== BOOKING SECTION ==================== */
+.booking-section {
+  background: #FAFBFC;
+  padding: 5rem 0;
+}
+
+.booking-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ==================== SERVICES SECTION ==================== */
+.services {
+  padding: 5rem 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.service-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) * 2);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: all 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+  background: var(--ink);
+  color: white;
+  padding: 3rem 0 1rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.footer-section p,
+.footer-section a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9375rem;
+}
+
+.footer-section a:hover {
+  color: var(--brand);
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.footer-logo img {
+  height: 40px;
+  width: auto;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.5rem; }
+  .calc-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .calc-inputs { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .hero-cta { flex-direction: column; align-items: center; }
+  .main-nav { 
+    order: 3; 
+    width: 100%; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 1rem; 
+  }
+  .header-content { 
+    text-align: center; 
+    flex-direction: column; 
+  }
+  .logo img, .hero-logo img { height: 60px; }
+  .calc-container, #bookingForm { padding: 2rem; }
+  .hero { padding: 5rem 0; }
+  .section { padding: 4rem 0; }
+  
+  /* Mobile Booking Form */
+  #bookingSection .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2rem; }
+  .calc-container, #bookingForm { padding: 1.5rem; }
+  .btn { min-width: auto; }
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+.text-center { text-align: center; }
+.text-brand { color: var(--brand); }
+.text-muted { color: var(--muted); }
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
