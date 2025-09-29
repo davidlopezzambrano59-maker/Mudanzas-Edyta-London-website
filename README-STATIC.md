@@ -34,3 +34,4 @@ Simply upload all files to your web server root directory. No build process requ
 
 ---
 **"Lift on the way"** 🚀
+

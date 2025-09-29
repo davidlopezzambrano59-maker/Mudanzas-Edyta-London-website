@@ -1,0 +1,67 @@
+{
+  "site": {
+    "title": "Mudanzas Edyta London",
+    "slogan": "Lift on the way",
+    "description": "Servicio de mudanzas premier de Londres"
+  },
+  "nav": {
+    "home": "Inicio",
+    "quote": "Cotización",
+    "services": "Servicios",
+    "areas": "Áreas",
+    "about": "Acerca de",
+    "faq": "Preguntas",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title": "Servicio Premier de Mudanzas en Londres",
+    "subtitle": "Soluciones de mudanza profesionales, confiables y sin estrés",
+    "cta": "Obtener Cotización Instantánea",
+    "ctaSecondary": "Llamar Ahora",
+    "slogan": "Lift on the way", 
+    "description": "Servicio profesional bilingüe de mudanzas con más de 10 años de experiencia sirviendo Londres.",
+    "fromPrice": "Desde £40/hora - Servicio profesional de mudanzas"
+  },
+  "testimonials": {
+    "title": "Lo Que Dicen Nuestros Clientes",
+    "subtitle": "Reseñas reales de Google - ve lo que nos convierte en el servicio de mudanzas de confianza de Londres",
+    "reviews": [
+      {
+        "name": "REEMPLAZAR_CON_NOMBRE_CLIENTE_REAL_1",
+        "text": "REEMPLAZAR_CON_TEXTO_RESEÑA_GOOGLE_REAL_1",
+        "rating": 5,
+        "date": "2024-01-15",
+        "source": "Google Reviews",
+        "location": "Londres, Reino Unido"
+      },
+      {
+        "name": "REEMPLAZAR_CON_NOMBRE_CLIENTE_REAL_2",
+        "text": "REEMPLAZAR_CON_TEXTO_RESEÑA_GOOGLE_REAL_2",
+        "rating": 5,
+        "date": "2024-02-03",
+        "source": "Google Reviews",
+        "location": "Londres, Reino Unido"
+      },
+      {
+        "name": "REEMPLAZAR_CON_NOMBRE_CLIENTE_REAL_3",
+        "text": "REEMPLAZAR_CON_TEXTO_RESEÑA_GOOGLE_REAL_3",
+        "rating": 5,
+        "date": "2024-02-20",
+        "source": "Google Reviews",
+        "location": "Londres, Reino Unido"
+      },
+      {
+        "name": "REEMPLAZAR_CON_NOMBRE_CLIENTE_REAL_4",
+        "text": "REEMPLAZAR_CON_TEXTO_RESEÑA_GOOGLE_REAL_4",
+        "rating": 5,
+        "date": "2024-03-01",
+        "source": "Google Reviews",
+        "location": "Londres, Reino Unido"
+      }
+    ]
+  },
+  "quote": {
+    "title": "Obtén tu Cotización Instantánea",
+    "subtitle": "Mudanzas profesionales hechas simples"
+  }
+}

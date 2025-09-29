@@ -22,6 +22,97 @@
     <link rel="stylesheet" href="pro-theme.css">
     
     <title>Mudanzas Edyta London Limited - Premier Removals Service</title>
+    
+    <!-- JSON-LD Structured Data for Reviews -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Mudanzas Edyta London Limited",
+      "description": "Professional removals service in London with 10+ years experience. DBS-checked team, fully insured, same-day availability.",
+      "url": "https://mudanzasedyta.com",
+      "telephone": "+447456507570",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "addressCountry": "GB"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "86",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Hexuan Yu"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "David and Edyta are the best. Helped so many times with the moves. Great service, very punctual and super nice clean vehicles. Will definitely stick with them for the future moves.",
+          "datePublished": "2024-09-15"
+        },
+        {
+          "@type": "Review", 
+          "author": {
+            "@type": "Person",
+            "name": "Jorge Ivan Restrepo"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "very professional, on time, very good treatment, very careful with my things, economical and very punctual.",
+          "datePublished": "2024-06-20"
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person", 
+            "name": "Daniela Talamo"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Everything went smooth. No damage, carefully handled! In a blink of an eye the moving was done. Very happy with everything.",
+          "datePublished": "2024-01-20"
+        }
+      ],
+      "serviceType": "Removal Services",
+      "areaServed": "London, UK",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Removal Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service", 
+              "name": "House Removals"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Office Relocations"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
     <style>
         /* Minimal overrides for existing functionality - all main styling in pro-theme.css */
         .calc-inputs .input-group:nth-child(1),
@@ -43,7 +134,12 @@
                     📞 07462 170197
                 </a>
             </div>
-            <div style="display: flex; gap: 1rem;">
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                <!-- Google Reviews Badge -->
+                <a href="https://www.google.com/maps/place/YOUR_GOOGLE_BUSINESS_URL" target="_blank" style="display: flex; align-items: center; gap: 8px; background: white; color: #333; text-decoration: none; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 500; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <span style="color: #fbbc04;">⭐</span>
+                    <span>5.0 • 86+ Reviews</span>
+                </a>
                 <a href="https://www.facebook.com/removalsmudanzasedytalondon" style="color: white; text-decoration: none;">📘</a>
                 <a href="https://www.linkedin.com/in/mudanzasedytalondon/" style="color: white; text-decoration: none;">💼</a>
                 <a href="https://instagram.com/mudanzasedytalondonlimited" style="color: white; text-decoration: none;">📸</a>
@@ -68,11 +164,10 @@
                 <!-- Navigation -->
                 <nav style="display: flex; gap: 2rem; align-items: center;">
                     <a href="index.html" style="color: #64748B; text-decoration: none; font-weight: 500; padding: 0.5rem 0;">Home</a>
-                    <a href="about.html" style="color: #64748B; text-decoration: none; font-weight: 500; padding: 0.5rem 0;">About Us</a>
-                    <div style="position: relative; display: inline-block;">
-                        <span style="color: #64748B; font-weight: 500; cursor: pointer; padding: 0.5rem 0;">Services ▼</span>
-                    </div>
-                    <a href="contact.html" style="color: #64748B; text-decoration: none; font-weight: 500; padding: 0.5rem 0;">Contact Us</a>
+                    <a href="services.html" style="color: #64748B; text-decoration: none; font-weight: 500; padding: 0.5rem 0;">Services</a>
+                    <a href="reviews.html" style="color: #64748B; text-decoration: none; font-weight: 500; padding: 0.5rem 0;">Reviews</a>
+                    <a href="about.html" style="color: #64748B; text-decoration: none; font-weight: 500; padding: 0.5rem 0;">About</a>
+                    <a href="contact.html" style="color: #64748B; text-decoration: none; font-weight: 500; padding: 0.5rem 0;">Contact</a>
                 </nav>
 
                 <!-- Search and CTA -->
@@ -86,9 +181,9 @@
         </div>
     </header>
 
-    <!-- WordPress-style Hero Section -->
-    <section style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;100&quot; height=&quot;100&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cdefs%3E%3Cpattern id=&quot;a&quot; patternUnits=&quot;userSpaceOnUse&quot; width=&quot;100&quot; height=&quot;100&quot; patternTransform=&quot;rotate(45)&quot;%3E%3Crect width=&quot;100&quot; height=&quot;100&quot; fill=&quot;%23374151&quot;/%3E%3Cpath d=&quot;M0 0h100v100H0z&quot; fill=&quot;url(%23b)&quot;/%3E%3C/pattern%3E%3ClinearGradient id=&quot;b&quot;%3E%3Cstop offset=&quot;0&quot; stop-color=&quot;%234B5563&quot;/%3E%3Cstop offset=&quot;1&quot; stop-color=&quot;%23374151&quot;/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;url(%23a)&quot;/%3E%3C/svg%3E'); background-size: cover; background-position: center; min-height: 70vh; display: flex; align-items: center; position: relative; color: white;">
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 100%);"></div>
+    <!-- WordPress-style Hero Section with Team Photo -->
+    <section style="background-image: url('team-photo.jpg.jpeg'); background-size: cover; background-position: center; min-height: 70vh; display: flex; align-items: center; position: relative; color: white;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 100%);"></div>
         <div class="container" style="position: relative; z-index: 2;">
             <div style="text-align: center; max-width: 800px; margin: 0 auto;">
                 <h1 style="font-size: 4rem; font-weight: 700; margin-bottom: 2rem; line-height: 1.1; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
@@ -381,6 +476,161 @@
         </div>
     </section>
 
+    <!-- Google Reviews Testimonials Section -->
+    <section class="testimonials-section" style="padding: 80px 0; background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white;">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 20px; color: #FF8A00;">What Our Customers Say</h2>
+                <p style="font-size: 1.2rem; color: #cccccc; max-width: 600px; margin: 0 auto;">
+                    Real reviews from Google and Trustpilot - see what makes us London's trusted removal service
+                </p>
+            </div>
+            
+            <div class="testimonials-container" style="max-width: 800px; margin: 0 auto; position: relative;">
+                <div class="testimonial-card active" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 40px; text-align: center; backdrop-filter: blur(10px); margin-bottom: 20px;">
+                    <div style="font-size: 4rem; opacity: 0.3; margin-bottom: 20px;">"</div>
+                    <blockquote style="font-size: 1.3rem; line-height: 1.6; margin-bottom: 30px; color: #f0f0f0;">
+                        <!-- REPLACE WITH YOUR FIRST GOOGLE REVIEW -->
+                        "David and Edyta are the best. Helped so many times with the moves. Great service, very punctual and super nice clean vehicles. Will definitely stick with them for the future moves."
+                    </blockquote>
+                    <div class="stars" style="display: flex; justify-content: center; gap: 5px; margin-bottom: 20px;">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <div class="customer-info">
+                        <h4 style="color: #FF8A00; font-size: 1.1rem; margin-bottom: 5px;">
+                            <!-- REPLACE WITH CUSTOMER NAME -->
+                            Hexuan Yu
+                        </h4>
+                        <p style="color: #cccccc; font-size: 0.9rem;">
+                            ⭐ Google Reviews • London, UK • September 2025
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 40px; text-align: center; backdrop-filter: blur(10px); margin-bottom: 20px; display: none;">
+                    <div style="font-size: 4rem; opacity: 0.3; margin-bottom: 20px;">"</div>
+                    <blockquote style="font-size: 1.3rem; line-height: 1.6; margin-bottom: 30px; color: #f0f0f0;">
+                        <!-- REPLACE WITH YOUR SECOND GOOGLE REVIEW -->
+                        "very professional, on time, very good treatment, very careful with my things, economical and very punctual."
+                    </blockquote>
+                    <div class="stars" style="display: flex; justify-content: center; gap: 5px; margin-bottom: 20px;">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <div class="customer-info">
+                        <h4 style="color: #FF8A00; font-size: 1.1rem; margin-bottom: 5px;">
+                            <!-- REPLACE WITH CUSTOMER NAME -->
+                            Jorge Ivan Restrepo
+                        </h4>
+                        <p style="color: #cccccc; font-size: 0.9rem;">
+                            ⭐ Google Reviews • London, UK • June 2024
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 40px; text-align: center; backdrop-filter: blur(10px); margin-bottom: 20px; display: none;">
+                    <div style="font-size: 4rem; opacity: 0.3; margin-bottom: 20px;">"</div>
+                    <blockquote style="font-size: 1.3rem; line-height: 1.6; margin-bottom: 30px; color: #f0f0f0;">
+                        <!-- REPLACE WITH YOUR THIRD GOOGLE REVIEW -->
+                        "Everything went smooth. No damage, carefully handled! In a blink of an eye the moving was done. Very happy with everything."
+                    </blockquote>
+                    <div class="stars" style="display: flex; justify-content: center; gap: 5px; margin-bottom: 20px;">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <div class="customer-info">
+                        <h4 style="color: #FF8A00; font-size: 1.1rem; margin-bottom: 5px;">
+                            <!-- REPLACE WITH CUSTOMER NAME -->
+                            Daniela Talamo
+                        </h4>
+                        <p style="color: #cccccc; font-size: 0.9rem;">
+                            ⭐ Google Reviews • London, UK • January 2024
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Navigation Buttons -->
+                <button onclick="previousTestimonial()" style="position: absolute; left: -50px; top: 50%; transform: translateY(-50%); background: #FF8A00; border: none; border-radius: 50%; width: 40px; height: 40px; color: white; cursor: pointer; font-size: 1.2rem;">‹</button>
+                <button onclick="nextTestimonial()" style="position: absolute; right: -50px; top: 50%; transform: translateY(-50%); background: #FF8A00; border: none; border-radius: 50%; width: 40px; height: 40px; color: white; cursor: pointer; font-size: 1.2rem;">›</button>
+                
+                <!-- ADD MORE REVIEW SLOTS HERE -->
+                <div class="testimonial-card" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 40px; text-align: center; backdrop-filter: blur(10px); margin-bottom: 20px; display: none;">
+                    <div style="font-size: 4rem; opacity: 0.3; margin-bottom: 20px;">"</div>
+                    <blockquote style="font-size: 1.3rem; line-height: 1.6; margin-bottom: 30px; color: #f0f0f0;">
+                        <!-- PASTE YOUR FOURTH REAL GOOGLE REVIEW TEXT HERE -->
+                        "By far, the best removals company to work with and hire. Edyta and her team far exceeded our expectations in every category. We had other removals company provide quotations that were just ridiculous but Mudanzas Edyta London Limited provided a fair and reasonable quotation. Edyta was very responsive to our enquiry and her team very professional and friendly, which made our move much more relaxed. I would highly recommend Mudanzas Edyta London Limited for their services and would definitely use their services in the future."
+                    </blockquote>
+                    <div class="stars" style="display: flex; justify-content: center; gap: 5px; margin-bottom: 20px;">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <div class="customer-info">
+                        <h4 style="color: #FF8A00; font-size: 1.1rem; margin-bottom: 5px;">
+                            trekkernyc
+                        </h4>
+                        <p style="color: #cccccc; font-size: 0.9rem;">
+                            ⭐ Google Reviews • London, UK • August 2023
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 40px; text-align: center; backdrop-filter: blur(10px); margin-bottom: 20px; display: none;">
+                    <div style="font-size: 4rem; opacity: 0.3; margin-bottom: 20px;">"</div>
+                    <blockquote style="font-size: 1.3rem; line-height: 1.6; margin-bottom: 30px; color: #f0f0f0;">
+                        <!-- PASTE YOUR FIFTH REAL GOOGLE REVIEW TEXT HERE -->
+                        "Everything went really well from my first booking through to the trip itself. Edyta could not have been more helpful or nicer to us. They were so professional. I was vey impressed and am looking forward to our next trip together."
+                    </blockquote>
+                    <div class="stars" style="display: flex; justify-content: center; gap: 5px; margin-bottom: 20px;">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <div class="customer-info">
+                        <h4 style="color: #FF8A00; font-size: 1.1rem; margin-bottom: 5px;">
+                            Adriana Turpin
+                        </h4>
+                        <p style="color: #cccccc; font-size: 0.9rem;">
+                            ⭐ Trustpilot Reviews • London, UK • August 2025
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 40px; text-align: center; backdrop-filter: blur(10px); margin-bottom: 20px; display: none;">
+                    <div style="font-size: 4rem; opacity: 0.3; margin-bottom: 20px;">"</div>
+                    <blockquote style="font-size: 1.3rem; line-height: 1.6; margin-bottom: 30px; color: #f0f0f0;">
+                        <!-- PASTE YOUR SIXTH REAL GOOGLE REVIEW TEXT HERE -->
+                        "This was probably one of the best removal company experiences I've ever had. They were very efficient and quick to communicate, fuss-free, helpful and the company owner's son came with a driver to do the job. Which they did very quickly. And I was allowed to ride in the van with my puppy, which was much appreciated! I am in the process of booking with them again for another move things in storage. Highly recommend."
+                    </blockquote>
+                    <div class="stars" style="display: flex; justify-content: center; gap: 5px; margin-bottom: 20px;">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <div class="customer-info">
+                        <h4 style="color: #FF8A00; font-size: 1.1rem; margin-bottom: 5px;">
+                            R Baker                                        
+                        </h4>
+                        <p style="color: #cccccc; font-size: 0.9rem;">
+                            ⭐ Google Reviews • London, UK • May 2023
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Dots Indicator -->
+                <div class="testimonial-dots" style="display: flex; justify-content: center; gap: 10px; margin-top: 30px;">
+                    <span class="dot active" onclick="currentTestimonial(1)" style="width: 12px; height: 12px; border-radius: 50%; background: #FF8A00; cursor: pointer; display: inline-block;"></span>
+                    <span class="dot" onclick="currentTestimonial(2)" style="width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.3); cursor: pointer; display: inline-block;"></span>
+                    <span class="dot" onclick="currentTestimonial(3)" style="width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.3); cursor: pointer; display: inline-block;"></span>
+                    <span class="dot" onclick="currentTestimonial(4)" style="width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.3); cursor: pointer; display: inline-block;"></span>
+                    <span class="dot" onclick="currentTestimonial(5)" style="width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.3); cursor: pointer; display: inline-block;"></span>
+                    <span class="dot" onclick="currentTestimonial(6)" style="width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.3); cursor: pointer; display: inline-block;"></span>
+                </div>
+            </div>
+            
+            <!-- Google Reviews CTA -->
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://maps.app.goo.gl/RFvfdtpED6v7q77E6" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; background: #4285f4; color: white; text-decoration: none; padding: 15px 30px; border-radius: 10px; font-weight: 600; transition: transform 0.2s;">
+                    <span style="font-size: 1.2rem;">📍</span>
+                    Read All Reviews on Google
+                    <span style="font-size: 0.8rem;">↗</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -417,9 +667,72 @@
     </footer>
 
     <!-- Google Maps Script -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZi-ygE0rHag90gI-nhvGmnE1GmZj-n-E&libraries=places&region=GB&callback=initMap"></script>
+    <!-- Replace YOUR_API_KEY_HERE with your actual restricted API key -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&libraries=places&region=GB&callback=initMap"></script>
 
     <script>
+        // ==================== TESTIMONIALS CAROUSEL ====================
+        let currentTestimonialIndex = 1;
+        const totalTestimonials = 6;
+        
+        function showTestimonial(n) {
+            const cards = document.querySelectorAll('.testimonial-card');
+            const dots = document.querySelectorAll('.testimonial-dots .dot');
+            
+            if (n > totalTestimonials) { currentTestimonialIndex = 1; }
+            if (n < 1) { currentTestimonialIndex = totalTestimonials; }
+            
+            // Hide all cards
+            cards.forEach(card => card.style.display = 'none');
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            // Show current card
+            if (cards[currentTestimonialIndex - 1]) {
+                cards[currentTestimonialIndex - 1].style.display = 'block';
+            }
+            if (dots[currentTestimonialIndex - 1]) {
+                dots[currentTestimonialIndex - 1].classList.add('active');
+                dots[currentTestimonialIndex - 1].style.background = '#FF8A00';
+            }
+        }
+        
+        function nextTestimonial() {
+            showTestimonial(currentTestimonialIndex += 1);
+        }
+        
+        function previousTestimonial() {
+            showTestimonial(currentTestimonialIndex -= 1);
+        }
+        
+        function currentTestimonial(n) {
+            showTestimonial(currentTestimonialIndex = n);
+        }
+        
+        // Auto-rotate testimonials every 5 seconds
+        setInterval(() => {
+            nextTestimonial();
+        }, 5000);
+        
+        // Update dot styles when not active
+        document.addEventListener('DOMContentLoaded', function() {
+            const dots = document.querySelectorAll('.testimonial-dots .dot');
+            dots.forEach((dot, index) => {
+                if (!dot.classList.contains('active')) {
+                    dot.style.background = 'rgba(255,255,255,0.3)';
+                }
+                dot.addEventListener('mouseenter', function() {
+                    if (!this.classList.contains('active')) {
+                        this.style.background = 'rgba(255,138,0,0.6)';
+                    }
+                });
+                dot.addEventListener('mouseleave', function() {
+                    if (!this.classList.contains('active')) {
+                        this.style.background = 'rgba(255,255,255,0.3)';
+                    }
+                });
+            });
+        });
+
         // ==================== GOOGLE MAPS DISTANCE CALCULATOR ====================
         
         // Global variables

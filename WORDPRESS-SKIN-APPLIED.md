@@ -122,3 +122,4 @@ This approach gives you:
 ---
 
 **Next Steps**: Open `index.html` in your browser to see the beautiful WordPress design applied to your fully functional removals website!
+

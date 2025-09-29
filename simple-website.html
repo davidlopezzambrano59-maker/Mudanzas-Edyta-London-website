@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional removals service in London with 10+ years experience. DBS-checked team, fully insured, same-day availability. Get instant quotes for home & office moves.">
+    <meta name="keywords" content="removals london, moving service, van hire, house removals, office relocation, furniture assembly">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mudanzas Edyta London - Premier Removals Service">
+    <meta property="og:description" content="Professional removals service in London with 10+ years experience. Get instant quotes for your move.">
+    <meta property="og:url" content="https://mudanzasedyta.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚚</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <title>Mudanzas Edyta London - Premier Removals Service</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', system-ui, sans-serif; 
+            line-height: 1.6; 
+            color: #333;
+        }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Header */
+        header { 
+            background: linear-gradient(135deg, #FF8A00 0%, #FFA500 100%); 
+            color: white; 
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-content { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .main-nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+        .nav-link:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .logo { 
+            font-size: 24px; 
+            font-weight: bold; 
+        }
+        .cta-buttons { 
+            display: flex; 
+            gap: 15px; 
+            flex-wrap: wrap;
+        }
+        .btn { 
+            padding: 12px 24px; 
+            border: none; 
+            border-radius: 8px; 
+            font-weight: bold; 
+            text-decoration: none; 
+            cursor: pointer; 
+            transition: all 0.3s;
+        }
+        .btn-primary { 
+            background: white; 
+            color: #FF8A00; 
+        }
+        .btn-primary:hover { 
+            background: #f0f0f0; 
+        }
+        .btn-secondary { 
+            background: transparent; 
+            color: white; 
+            border: 2px solid white; 
+        }
+        .btn-secondary:hover { 
+            background: white; 
+            color: #FF8A00; 
+        }
+        
+        /* Hero */
+        .hero { 
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%); 
+            padding: 80px 0; 
+            text-align: center; 
+        }
+        .hero h1 { 
+            font-size: 48px; 
+            margin-bottom: 20px; 
+            color: #333; 
+        }
+        .hero p { 
+            font-size: 20px; 
+            color: #666; 
+            margin-bottom: 40px; 
+            max-width: 600px; 
+            margin-left: auto; 
+            margin-right: auto; 
+        }
+        .hero-cta { 
+            display: flex; 
+            gap: 20px; 
+            justify-content: center; 
+            flex-wrap: wrap; 
+        }
+        
+        /* Calculator */
+        .calculator { 
+            background: white; 
+            padding: 60px 0; 
+            border-top: 1px solid #eee; 
+        }
+        .calc-container { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            background: white; 
+            padding: 40px; 
+            border-radius: 20px; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+        }
+        .calc-title { 
+            text-align: center; 
+            margin-bottom: 40px; 
+        }
+        .calc-title h2 { 
+            font-size: 36px; 
+            color: #333; 
+            margin-bottom: 10px; 
+        }
+        .calc-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 40px; 
+            align-items: start; 
+        }
+        .calc-inputs { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 20px; 
+        }
+        .input-group label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: bold; 
+            color: #333; 
+        }
+        .input-group select, 
+        .input-group input { 
+            width: 100%; 
+            padding: 12px; 
+            border: 2px solid #ddd; 
+            border-radius: 8px; 
+            font-size: 16px; 
+        }
+        .input-group select:focus, 
+        .input-group input:focus { 
+            outline: 2px solid #FF8A00; 
+            outline-offset: 2px;
+            border-color: #FF8A00; 
+        }
+        
+        .btn:focus {
+            outline: 2px solid #333;
+            outline-offset: 2px;
+        }
+        
+        .calc-result { 
+            background: linear-gradient(135deg, #FF8A00 0%, #FFA500 100%); 
+            color: white; 
+            padding: 30px; 
+            border-radius: 15px; 
+            text-align: center; 
+        }
+        .calc-result h3 { 
+            font-size: 24px; 
+            margin-bottom: 20px; 
+        }
+        .breakdown { 
+            text-align: left; 
+            margin-bottom: 20px; 
+        }
+        .breakdown div { 
+            display: flex; 
+            justify-content: space-between; 
+            margin-bottom: 8px; 
+            padding-bottom: 8px; 
+            border-bottom: 1px solid rgba(255,255,255,0.2); 
+        }
+        .total { 
+            font-size: 32px; 
+            font-weight: bold; 
+            margin: 20px 0; 
+        }
+        .whatsapp-btn { 
+            background: #25D366; 
+            color: white; 
+            padding: 15px 30px; 
+            border: none; 
+            border-radius: 10px; 
+            font-size: 18px; 
+            font-weight: bold; 
+            cursor: pointer; 
+            width: 100%; 
+            margin-top: 20px; 
+        }
+        .whatsapp-btn:hover { 
+            background: #1da851; 
+        }
+        
+        /* Services */
+        .services { 
+            background: #f8f9fa; 
+            padding: 80px 0; 
+        }
+        .services h2 { 
+            text-align: center; 
+            font-size: 36px; 
+            margin-bottom: 50px; 
+            color: #333; 
+        }
+        .services-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
+        }
+        .service-card { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 15px; 
+            text-align: center; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            transition: transform 0.3s; 
+        }
+        .service-card:hover { 
+            transform: translateY(-5px); 
+        }
+        .service-icon { 
+            font-size: 48px; 
+            margin-bottom: 20px; 
+        }
+        
+        /* Footer */
+        footer { 
+            background: #333; 
+            color: white; 
+            padding: 60px 0 20px; 
+        }
+        .footer-content { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 40px; 
+            margin-bottom: 40px; 
+        }
+        .footer-section h3 { 
+            color: #FF8A00; 
+            margin-bottom: 20px; 
+        }
+        .footer-section p, 
+        .footer-section a { 
+            color: #ccc; 
+            text-decoration: none; 
+            margin-bottom: 10px; 
+            display: block; 
+        }
+        .footer-section a:hover { 
+            color: #FF8A00; 
+        }
+        .footer-bottom { 
+            text-align: center; 
+            padding-top: 20px; 
+            border-top: 1px solid #555; 
+            color: #999; 
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .calc-grid { grid-template-columns: 1fr; }
+            .header-content { 
+                text-align: center; 
+                gap: 15px; 
+                flex-direction: column;
+            }
+            .main-nav {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .nav-link {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+            .hero-cta { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Mudanzas Edyta London</div>
+                <nav class="main-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="reviews.html" class="nav-link">Reviews</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+                <div class="cta-buttons">
+                    <a href="#calculator" class="btn btn-primary">Get Quote</a>
+                    <a href="tel:+447456507570" class="btn btn-secondary">Call 07456 507 570</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>London's Premier Removals Service</h1>
+            <p>Professional, reliable, and bilingual moving solutions with 10+ years of experience. DBS-checked team, fully insured, same-day availability.</p>
+            <div class="hero-cta">
+                <a href="#calculator" class="btn btn-primary">Get Instant Quote</a>
+                <a href="tel:+447456507570" class="btn btn-secondary">Call Now</a>
+            </div>
+            <div style="margin-top: 30px; font-size: 24px; color: #FF8A00; font-weight: bold; font-style: italic;">
+                "Lift on the way" 🚀
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="calculator">
+        <div class="container">
+            <div class="calc-container">
+                <div class="calc-title">
+                    <h2>🧮 Instant Quote Calculator</h2>
+                    <p>Get your moving quote in seconds • 2-hour minimum • No hidden fees</p>
+                </div>
+                
+                <div class="calc-grid">
+                    <div class="calc-inputs">
+                        <div class="input-group">
+                            <label>🚐 Van Size</label>
+                            <select id="vanSize" onchange="calculateQuote()">
+                                <option value="40">Small Van (£40/hour)</option>
+                                <option value="45" selected>Medium Van (£45/hour)</option>
+                                <option value="50">Luton Van - 17.3m³ (£50/hour)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label>👷 Number of Loaders</label>
+                            <select id="loaders" onchange="calculateQuote()">
+                                <option value="0">No additional loaders</option>
+                                <option value="1" selected>1 loader (+£25/hour)</option>
+                                <option value="2">2 loaders (+£50/hour)</option>
+                                <option value="3">3 loaders (+£75/hour)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label>⏰ Estimated Hours</label>
+                            <input type="number" id="hours" value="2" min="1" max="12" onchange="calculateQuote()">
+                            <small style="color: #666; margin-top: 5px; display: block;">2-hour minimum applies</small>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label>📍 Distance (Miles)</label>
+                            <input type="number" id="miles" value="5" min="0" max="100" step="0.1" onchange="calculateQuote()">
+                            <small style="color: #666; margin-top: 5px; display: block;">First 10 miles are FREE</small>
+                        </div>
+                    </div>
+                    
+                    <div class="calc-result">
+                        <h3>💰 Quote Breakdown</h3>
+                        <div class="breakdown" id="breakdown">
+                            <!-- Breakdown will be inserted here by JavaScript -->
+                        </div>
+                        <div class="total" id="total">£120</div>
+                        <button class="whatsapp-btn" onclick="bookViaWhatsApp()">
+                            📱 Book via WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Home & Flat Removals</h3>
+                    <p>Complete residential moving service with professional packing and protection</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3>Office Relocations</h3>
+                    <p>Minimize downtime with our efficient commercial moving solutions</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✈️</div>
+                    <h3>Airport Transfers</h3>
+                    <p>Reliable transport to and from all London airports</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Furniture Assembly</h3>
+                    <p>Professional assembly and disassembly of furniture and equipment</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">♻️</div>
+                    <h3>Recycling & Clearance</h3>
+                    <p>Eco-friendly disposal and clearance services</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎹</div>
+                    <h3>Special Items</h3>
+                    <p>Pianos, motorbikes, antiques, and other valuable items</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mudanzas Edyta London</h3>
+                    <p>"Lift on the way"</p>
+                    <p>London's premier removals service with 10+ years of experience. Professional, reliable, and bilingual moving solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <a href="tel:+447456507570">📞 07456 507 570</a>
+                    <a href="https://wa.me/447456507570">💬 WhatsApp</a>
+                    <p>📍 Serving all of London and surrounding areas</p>
+                    <p>🕒 Mon-Sun: 8:00 AM - 8:00 PM</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Why Choose Us</h3>
+                    <p>⭐ 10+ Years Experience</p>
+                    <p>🛡️ Fully Insured</p>
+                    <p>✅ DBS Checked</p>
+                    <p>🌍 Bilingual Service</p>
+                    <p>⚡ Same Day Available</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mudanzas Edyta London Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function calculateQuote() {
+            // Get DOM elements with error checking
+            const vanSizeEl = document.getElementById('vanSize');
+            const loadersEl = document.getElementById('loaders');
+            const hoursEl = document.getElementById('hours');
+            const milesEl = document.getElementById('miles');
+            
+            if (!vanSizeEl || !loadersEl || !hoursEl || !milesEl) {
+                console.error('Calculator elements not found');
+                return;
+            }
+            
+            // Parse and validate inputs
+            const vanSize = parseInt(vanSizeEl.value);
+            const loaders = parseInt(loadersEl.value);
+            let hours = parseInt(hoursEl.value);
+            let miles = parseFloat(milesEl.value);
+            
+            // Input validation
+            if (isNaN(hours) || hours < 1) {
+                hours = 2;
+                hoursEl.value = 2;
+            }
+            if (isNaN(miles) || miles < 0) {
+                miles = 0;
+                milesEl.value = 0;
+            }
+            if (hours > 12) {
+                hours = 12;
+                hoursEl.value = 12;
+            }
+            if (miles > 100) {
+                miles = 100;
+                milesEl.value = 100;
+            }
+            
+            // Business rules
+            const loaderRate = 25;
+            const minHours = 2;
+            const mileRate = 1.5;
+            
+            const baseHourly = vanSize + (loaders * loaderRate);
+            const billableHours = Math.max(minHours, hours);
+            const distanceCharge = miles <= 10 ? 0 : miles * mileRate;
+            const total = baseHourly * billableHours + distanceCharge;
+            
+            // Update breakdown with error checking
+            const breakdown = document.getElementById('breakdown');
+            const totalEl = document.getElementById('total');
+            
+            if (!breakdown || !totalEl) {
+                console.error('Result elements not found');
+                return;
+            }
+            
+            breakdown.innerHTML = `
+                <div><span>Van Rate:</span><span>£${vanSize}/hour</span></div>
+                ${loaders > 0 ? `<div><span>Loaders (${loaders} × £25):</span><span>£${loaders * loaderRate}/hour</span></div>` : ''}
+                <div><span>Hourly Rate:</span><span>£${baseHourly}/hour</span></div>
+                <div><span>Labour (${billableHours}h):</span><span>£${baseHourly * billableHours}</span></div>
+                <div><span>Distance (${miles} miles):</span><span>${distanceCharge === 0 ? 'FREE (first 10 miles)' : '£' + distanceCharge.toFixed(2)}</span></div>
+            `;
+            
+            totalEl.textContent = `£${total.toFixed(2)}`;
+            
+            // Store for WhatsApp
+            window.currentQuote = {
+                vanSize, loaders, hours, miles, billableHours, baseHourly, distanceCharge, total
+            };
+        }
+        
+        function bookViaWhatsApp() {
+            const quote = window.currentQuote;
+            if (!quote) {
+                alert('Please calculate a quote first!');
+                return;
+            }
+            
+            const vanNames = {40: 'Small Van', 45: 'Medium Van', 50: 'Luton Van (17.3m³)'};
+            
+            let message = `🚚 *QUOTE REQUEST - Mudanzas Edyta London*\n\n`;
+            message += `📋 *QUOTE BREAKDOWN*\n`;
+            message += `🚐 *Van Size:* ${vanNames[quote.vanSize]}\n`;
+            message += `👷 *Loaders:* ${quote.loaders}\n`;
+            message += `⏰ *Hours:* ${quote.hours} (Billable: ${quote.billableHours})\n`;
+            message += `📍 *Distance:* ${quote.miles} miles\n\n`;
+            message += `💰 *PRICING BREAKDOWN*\n`;
+            message += `• Van: £${quote.vanSize}/hour\n`;
+            if (quote.loaders > 0) message += `• Loaders: £${quote.loaders * 25}/hour\n`;
+            message += `• Hourly Rate: £${quote.baseHourly}/hour\n`;
+            message += `• Labour Cost: £${quote.baseHourly} × ${quote.billableHours}h = £${(quote.baseHourly * quote.billableHours).toFixed(2)}\n`;
+            message += `• Distance Charge: ${quote.distanceCharge === 0 ? 'FREE (≤10 miles)' : '£' + quote.distanceCharge.toFixed(2)}\n`;
+            message += `\n🎯 *TOTAL: £${quote.total.toFixed(2)}*\n\n`;
+            message += `✅ Please confirm this quote and let me know your preferred moving date and time!\n\n`;
+            message += `"Lift on the way" 🚀`;
+            
+            const url = `https://wa.me/447456507570?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+        
+        // Calculate initial quote on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            calculateQuote();
+        });
+        
+        // Add input event listeners for real-time updates
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputs = ['vanSize', 'loaders', 'hours', 'miles'];
+            inputs.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.addEventListener('input', calculateQuote);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

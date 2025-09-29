@@ -1,0 +1,67 @@
+{
+  "site": {
+    "title": "Mudanzas Edyta London",
+    "slogan": "Lift on the way",
+    "description": "London's premier removals service"
+  },
+  "nav": {
+    "home": "Home",
+    "quote": "Quote",
+    "services": "Services",
+    "areas": "Areas",
+    "about": "About",
+    "faq": "FAQ",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title": "London's Premier Removals Service",
+    "subtitle": "Professional, reliable, and stress-free moving solutions",
+    "cta": "Get Instant Quote",
+    "ctaSecondary": "Call Now",
+    "slogan": "Lift on the way",
+    "description": "Professional bilingual removal service with over 10 years experience serving London.",
+    "fromPrice": "From £40/hour - Professional removals service"
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "subtitle": "Real reviews from Google - see what makes us London's trusted removal service",
+    "reviews": [
+      {
+        "name": "REPLACE_WITH_REAL_CUSTOMER_NAME_1",
+        "text": "REPLACE_WITH_REAL_GOOGLE_REVIEW_TEXT_1",
+        "rating": 5,
+        "date": "2024-01-15",
+        "source": "Google Reviews",
+        "location": "London, UK"
+      },
+      {
+        "name": "REPLACE_WITH_REAL_CUSTOMER_NAME_2", 
+        "text": "REPLACE_WITH_REAL_GOOGLE_REVIEW_TEXT_2",
+        "rating": 5,
+        "date": "2024-02-03",
+        "source": "Google Reviews",
+        "location": "London, UK"
+      },
+      {
+        "name": "REPLACE_WITH_REAL_CUSTOMER_NAME_3",
+        "text": "REPLACE_WITH_REAL_GOOGLE_REVIEW_TEXT_3", 
+        "rating": 5,
+        "date": "2024-02-20",
+        "source": "Google Reviews",
+        "location": "London, UK"
+      },
+      {
+        "name": "REPLACE_WITH_REAL_CUSTOMER_NAME_4",
+        "text": "REPLACE_WITH_REAL_GOOGLE_REVIEW_TEXT_4",
+        "rating": 5,
+        "date": "2024-03-01",
+        "source": "Google Reviews", 
+        "location": "London, UK"
+      }
+    ]
+  },
+  "quote": {
+    "title": "Get Your Instant Quote",
+    "subtitle": "Professional removals made simple"
+  }
+}
