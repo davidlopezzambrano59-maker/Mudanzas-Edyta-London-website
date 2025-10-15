@@ -28,6 +28,290 @@
         .story-visual { background: linear-gradient(135deg, var(--brand) 0%, var(--brand-accent) 100%); }
         .member-avatar { background: linear-gradient(135deg, var(--brand) 0%, var(--brand-accent) 100%); }
         .certifications-section { background: linear-gradient(135deg, var(--brand) 0%, var(--brand-accent) 100%); }
+        
+        /* Hero Section with Images */
+        .about-hero-images {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            margin-top: 50px;
+            align-items: start;
+        }
+        
+        .about-logo-container {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .about-logo-container:hover {
+            transform: translateY(-5px);
+        }
+        
+        .about-logo {
+            width: 100%;
+            max-width: 240px;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .about-team-photo-container {
+            position: relative;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .about-team-photo-container:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 70px rgba(0,0,0,0.2);
+        }
+        
+        .about-team-photo {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .team-photo-caption {
+            padding: 25px 30px;
+            background: linear-gradient(135deg, var(--brand) 0%, var(--brand-accent) 100%);
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 0.3px;
+        }
+        
+        .tagline {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--brand);
+            margin-top: 15px;
+        }
+        
+        /* Story Section with Images */
+        .story-main-heading {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .story-main-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--brand) 0%, var(--brand-accent) 100%);
+            border-radius: 2px;
+        }
+        
+        .story-content-with-images {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+        
+        .story-text-block {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+        }
+        
+        .story-subtitle {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--brand);
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+        
+        .story-subtitle:first-child {
+            margin-top: 0;
+        }
+        
+        .story-text-block p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 25px;
+        }
+        
+        .story-image-wrapper {
+            margin: 35px 0;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            transition: transform 0.3s ease;
+        }
+        
+        .story-image-wrapper:hover {
+            transform: scale(1.02);
+        }
+        
+        .story-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .story-image-secondary .story-image {
+            height: 280px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .story-image-large .story-image {
+            height: 400px;
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+        
+        .image-caption {
+            padding: 15px 20px;
+            background: #f8f9fa;
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+            text-align: center;
+            margin: 0;
+            border-top: 3px solid var(--brand);
+        }
+        
+        .story-visual-card {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .story-visual {
+            padding: 50px 40px;
+            border-radius: 20px;
+            color: white;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        
+        .story-visual h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+        
+        .story-visual .highlight {
+            display: block;
+            font-size: 72px;
+            font-weight: 800;
+            margin: 20px 0;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .story-visual p {
+            font-size: 16px;
+            line-height: 1.6;
+            opacity: 0.9;
+            margin: 0;
+        }
+        
+        .story-bottom {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            background: white;
+            padding: 50px;
+            border-radius: 24px;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.1);
+            align-items: center;
+        }
+        
+        .story-bottom-text h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--brand);
+            margin-bottom: 20px;
+        }
+        
+        .story-bottom-text p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        
+        .story-bottom-text p:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .about-hero-images {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .about-logo-container {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            
+            .story-content-with-images {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .story-bottom {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .about-team-photo {
+                height: 350px;
+            }
+            
+            .team-photo-caption {
+                font-size: 16px;
+                padding: 20px;
+            }
+            
+            .story-main-heading {
+                font-size: 36px;
+                margin-bottom: 40px;
+            }
+            
+            .story-text-block {
+                padding: 30px 25px;
+            }
+            
+            .story-subtitle {
+                font-size: 24px;
+            }
+            
+            .story-image {
+                height: 250px !important;
+            }
+            
+            .story-bottom {
+                padding: 35px 25px;
+            }
+        }
     </style>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3B7BE8CRKY"></script>
@@ -45,7 +329,7 @@
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">
-                    <img src="logo.png" alt="Mudanzas Edyta London - Lift on the way">
+                    <img src="logo-full.png" alt="Mudanzas Edyta London - Lift on the way">
                     <div class="logo-text">Mudanzas Edyta London</div>
                 </a>
                 <nav class="main-nav">
@@ -63,32 +347,74 @@
         </div>
     </header>
 
+    <!-- Hero Section with Logo and Team Photo -->
     <section class="page-header">
         <div class="container">
             <h1>About Mudanzas Edyta London</h1>
             <p>London's premier removals service with over 10 years of experience, providing professional, reliable, and bilingual moving solutions across the capital</p>
-            <div class="about-hero-logo">
-                <img src="logo.png" alt="Mudanzas Edyta London - Lift on the way">
+            
+            <!-- Logo and Team Photo Container -->
+            <div class="about-hero-images">
+                <div class="about-logo-container">
+                    <img src="logo-full.png" alt="Mudanzas Edyta London - Lift on the way" class="about-logo">
+                    <div class="tagline">"Lift on the way" 🚀</div>
+                </div>
+                <div class="about-team-photo-container">
+                    <img src="team-photo.jpg" alt="Mudanzas Edyta London Team" class="about-team-photo">
+                    <div class="team-photo-caption">Our Professional Team - Ready to Make Your Move Stress-Free</div>
+                </div>
             </div>
-            <div class="tagline">"Lift on the way" 🚀</div>
         </div>
     </section>
 
+    <!-- Our Story Section with Integrated Images -->
     <section class="story-section">
         <div class="container">
-            <div class="story-content">
-                <div class="story-text">
-                    <h2>Our Story</h2>
+            <h2 class="story-main-heading">Our Story</h2>
+            <div class="story-content-with-images">
+                <!-- Story Content Left Side -->
+                <div class="story-text-block">
+                    <h3 class="story-subtitle">How We Started</h3>
                     <p>Founded over a decade ago, Mudanzas Edyta London began as a small family business with a simple mission: to make moving stress-free for everyone in London. What started with just one van and a passion for helping people has grown into one of London's most trusted removal services.</p>
                     
-                    <p>Our founder, Edyta, moved to London herself and experienced firsthand the challenges of relocating in a busy city. She understood the importance of having reliable, professional help during one of life's most stressful events. This personal experience became the foundation of our company's commitment to exceptional service.</p>
+                    <!-- Image Placeholder 1 - Story Beginning -->
+                    <div class="story-image-wrapper">
+                        <img src="story-image-1.jpg" alt="Our Journey - From One Van to a Fleet" class="story-image">
+                        <p class="image-caption">Where it all began - our first van in 2014</p>
+                    </div>
                     
-                    <p>Today, we're proud to serve the diverse communities across London, offering bilingual services and understanding the unique needs of both local and international residents. Our team has grown, but our core values remain the same: professionalism, reliability, and genuine care for our customers.</p>
+                    <h3 class="story-subtitle">The Personal Touch</h3>
+                    <p>Our founder, Edyta, moved to London herself and experienced firsthand the challenges of relocating in a busy city. She understood the importance of having reliable, professional help during one of life's most stressful events. This personal experience became the foundation of our company's commitment to exceptional service.</p>
                 </div>
-                <div class="story-visual">
-                    <h3>Serving London Since</h3>
-                    <span class="highlight">2014</span>
-                    <p>Over a decade of trusted service, thousands of happy customers, and countless successful moves across London and beyond.</p>
+
+                <!-- Story Visual Card -->
+                <div class="story-visual-card">
+                    <div class="story-visual">
+                        <h3>Serving London Since</h3>
+                        <span class="highlight">2014</span>
+                        <p>Over a decade of trusted service, thousands of happy customers, and countless successful moves across London and beyond.</p>
+                    </div>
+                    
+                    <!-- Image Placeholder 2 - In Action -->
+                    <div class="story-image-wrapper story-image-secondary">
+                        <img src="story-image-2.jpg" alt="Our Team in Action" class="story-image">
+                        <p class="image-caption">Professional care in every move</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Story Section -->
+            <div class="story-bottom">
+                <div class="story-bottom-text">
+                    <h3 class="story-subtitle">Who We Are Today</h3>
+                    <p>Today, we're proud to serve the diverse communities across London, offering bilingual services and understanding the unique needs of both local and international residents. Our team has grown, but our core values remain the same: professionalism, reliability, and genuine care for our customers.</p>
+                    <p>Every member of our team is DBS-checked, fully insured, and trained to handle your belongings with the utmost care. We're not just a moving company—we're your partners in making one of life's biggest transitions as smooth as possible.</p>
+                </div>
+                
+                <!-- Image Placeholder 3 - Modern Day -->
+                <div class="story-image-wrapper story-image-large">
+                    <img src="story-image-3.jpg" alt="Our Modern Fleet and Team" class="story-image">
+                    <p class="image-caption">Our modern fleet, ready to serve all of London</p>
                 </div>
             </div>
         </div>
@@ -210,7 +536,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="logo.png" alt="Mudanzas Edyta London Logo">
+                        <img src="logo-full.png" alt="Mudanzas Edyta London Logo">
                         <div>
                             <h3 style="margin-bottom: 5px;">Mudanzas Edyta London</h3>
                             <p style="margin-bottom: 15px; color: #FF8A00; font-style: italic;">"Lift on the way"</p>
