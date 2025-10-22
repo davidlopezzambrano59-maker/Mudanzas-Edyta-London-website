@@ -23,15 +23,494 @@
     
     <title>Our Services - Mudanzas Edyta London</title>
     <style>
-        /* Minimal overrides for existing functionality - all main styling in pro-theme.css */
+        /* Services Page Specific Styles */
         .nav-link.active {
             background: rgba(255,255,255,0.2);
         }
-        .service-visual {
+
+        /* Hero Section */
+        .services-hero {
             background: linear-gradient(135deg, var(--brand) 0%, var(--brand-accent) 100%);
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
         }
-        .pricing-banner {
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-large {
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            font-weight: 500;
+        }
+
+        .badge-icon {
+            font-size: 1.25rem;
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+            color: var(--ink);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--brand) 0%, var(--brand-accent) 100%);
+            border-radius: 2px;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .service-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 6rem;
+            padding: 3rem 0;
+        }
+
+        .service-detail:nth-child(even) {
+            background: #f8fafc;
+            margin: 0 -2rem;
+            padding: 3rem 2rem;
+            border-radius: 1rem;
+        }
+
+        .service-content {
+            padding-right: 2rem;
+        }
+
+        .service-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--ink);
+            position: relative;
+        }
+
+        .service-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--brand) 0%, var(--brand-accent) 100%);
+            border-radius: 2px;
+        }
+
+        .service-content p {
+            color: var(--muted);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            font-size: 1.125rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .service-features li {
+            padding: 0.75rem 0;
+            color: var(--muted);
+            position: relative;
+            padding-left: 2rem;
+            font-size: 1rem;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--brand);
+            font-weight: bold;
+            font-size: 1.125rem;
+        }
+
+        .service-image {
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-image:hover {
+            transform: scale(1.02);
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--brand);
+            color: var(--brand);
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 1rem;
+        }
+
+        .btn-outline:hover {
+            background: var(--brand);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3);
+        }
+
+        /* How It Works Timeline */
+        .how-it-works {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 2rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--brand) 0%, var(--brand-accent) 100%);
+        }
+
+        .timeline-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .step-number {
+            width: 4rem;
+            height: 4rem;
             background: linear-gradient(135deg, var(--brand) 0%, var(--brand-accent) 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-right: 2rem;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-content {
+            flex: 1;
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border-left: 4px solid var(--brand);
+        }
+
+        .step-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--ink);
+        }
+
+        .step-content p {
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        /* FAQ Accordion */
+        .faq-section {
+            padding: 6rem 0;
+            background: #f8fafc;
+        }
+
+        .faq-accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--ink);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #f8fafc;
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            color: var(--brand);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question[aria-expanded="true"] .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer.active {
+            max-height: 200px;
+        }
+
+        .faq-answer p {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--brand) 0%, var(--brand-accent) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .cta-content p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--brand);
+        }
+
+        /* Mobile Sticky Button */
+        .mobile-sticky-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            display: none;
+        }
+
+        .mobile-sticky-btn .btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            animation: pulse 2s infinite;
+        }
+
+        .btn-icon {
+            font-size: 1.25rem;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.125rem;
+            }
+
+            .trust-badges {
+                gap: 1rem;
+            }
+
+            .trust-badge {
+                padding: 0.5rem 1rem;
+                font-size: 0.875rem;
+            }
+
+            .service-detail {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                margin-bottom: 4rem;
+                padding: 2rem 0;
+            }
+
+            .service-detail:nth-child(even) {
+                margin: 0 -1rem;
+                padding: 2rem 1rem;
+            }
+
+            .service-content {
+                padding-right: 0;
+                order: 2;
+            }
+
+            .service-image {
+                order: 1;
+            }
+
+            .service-content h3 {
+                font-size: 1.75rem;
+            }
+
+            .service-image img {
+                height: 250px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .timeline::before {
+                left: 1.5rem;
+            }
+
+            .step-number {
+                width: 3rem;
+                height: 3rem;
+                font-size: 1.25rem;
+                margin-right: 1rem;
+            }
+
+            .step-content {
+                padding: 1rem;
+            }
+
+            .cta-content h2 {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .mobile-sticky-btn {
+                display: block;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services-hero {
+                padding: 4rem 0;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .trust-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .services-grid-section,
+            .how-it-works,
+            .faq-section {
+                padding: 4rem 0;
+            }
         }
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3B7BE8CRKY"></script>
@@ -66,23 +545,46 @@
         </div>
     </header>
 
-    <section class="page-header">
+    <!-- Hero Section -->
+    <section class="services-hero">
         <div class="container">
-            <h1>Our Professional Services</h1>
-            <p>Comprehensive removal and transport solutions across London with over 10 years of experience</p>
+            <div class="hero-content">
+                <h1>Professional Removal Services</h1>
+                <p class="hero-subtitle">Comprehensive removal and transport solutions across London with over 10 years of trusted experience. From residential moves to office relocations, we make your transition stress-free.</p>
+                <a href="index.html#calculator" class="btn btn-primary btn-large">Get Instant Quote</a>
+                
+                <!-- Trust Badges -->
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <span class="badge-icon">✅</span>
+                        <span>DBS-Checked</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="badge-icon">🛡️</span>
+                        <span>Fully Insured</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="badge-icon">⭐</span>
+                        <span>10+ Years</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="badge-icon">⭐</span>
+                        <span>4.9★ Reviews</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Services Section -->
     <section class="services-section">
         <div class="container">
-            <!-- Home & Flat Removals -->
+            <h2 class="section-title">Our Services</h2>
+            
+            <!-- Residential Removals -->
             <div class="service-detail">
-                <div class="service-visual">
-                    <span class="service-icon">🏠</span>
-                    <h3>Home & Flat Removals</h3>
-                </div>
                 <div class="service-content">
-                    <h2>Residential Moving Services</h2>
+                    <h3>Residential Removals</h3>
                     <p>Complete home and flat removal service with professional packing, loading, transport, and unpacking. We handle everything from studio flats to large family homes with care and efficiency.</p>
                     <ul class="service-features">
                         <li>Professional packing materials included</li>
@@ -92,17 +594,20 @@
                         <li>Fully insured for your peace of mind</li>
                         <li>No hidden charges or surprises</li>
                     </ul>
+                    <a href="index.html#calculator" class="btn btn-outline">Get Quote</a>
+                </div>
+                <div class="service-image">
+                    <picture>
+                        <source srcset="service-residential.webp" type="image/webp">
+                        <img src="service-residential.jpg" alt="Professional residential removal service" loading="lazy">
+                    </picture>
                 </div>
             </div>
 
             <!-- Office Relocations -->
             <div class="service-detail">
-                <div class="service-visual">
-                    <span class="service-icon">🏢</span>
-                    <h3>Office Relocations</h3>
-                </div>
                 <div class="service-content">
-                    <h2>Commercial Moving Solutions</h2>
+                    <h3>Office Relocations</h3>
                     <p>Minimize business downtime with our efficient commercial moving services. We understand the importance of getting your business back up and running quickly.</p>
                     <ul class="service-features">
                         <li>Weekend and evening moves available</li>
@@ -112,101 +617,233 @@
                         <li>Minimal business disruption</li>
                         <li>Secure transport for sensitive materials</li>
                     </ul>
+                    <a href="index.html#calculator" class="btn btn-outline">Get Quote</a>
+                </div>
+                <div class="service-image">
+                    <picture>
+                        <source srcset="service-office.webp" type="image/webp">
+                        <img src="service-office.jpg" alt="Professional office relocation service" loading="lazy">
+                    </picture>
                 </div>
             </div>
 
-            <!-- Airport Transfers -->
+            <!-- Man & Van -->
             <div class="service-detail">
-                <div class="service-visual">
-                    <span class="service-icon">✈️</span>
-                    <h3>Airport Transfers</h3>
-                </div>
                 <div class="service-content">
-                    <h2>Reliable Airport Transport</h2>
-                    <p>Professional transport services to and from all London airports. Perfect for travelers with excess luggage or those needing reliable, punctual service.</p>
+                    <h3>Man & Van</h3>
+                    <p>Perfect for smaller moves, deliveries, and collections. Quick, efficient, and cost-effective service for when you need reliable transport without the full removal service.</p>
                     <ul class="service-features">
-                        <li>All London airports covered</li>
-                        <li>Flight tracking for delays</li>
-                        <li>Large luggage capacity</li>
-                        <li>Meet and greet service</li>
-                        <li>Competitive fixed rates</li>
-                        <li>24/7 availability</li>
+                        <li>Same-day service available</li>
+                        <li>Competitive hourly rates</li>
+                        <li>Flexible scheduling</li>
+                        <li>Small to medium loads</li>
+                        <li>Quick turnaround times</li>
+                        <li>Professional handling</li>
                     </ul>
+                    <a href="index.html#calculator" class="btn btn-outline">Get Quote</a>
+                </div>
+                <div class="service-image">
+                    <picture>
+                        <source srcset="service-manvan.webp" type="image/webp">
+                        <img src="service-manvan.jpg" alt="Man and van service for small moves" loading="lazy">
+                    </picture>
                 </div>
             </div>
 
-            <!-- Furniture Assembly -->
+            <!-- Packing & Materials -->
             <div class="service-detail">
-                <div class="service-visual">
-                    <span class="service-icon">🔧</span>
-                    <h3>Furniture Assembly</h3>
-                </div>
                 <div class="service-content">
-                    <h2>Professional Assembly Service</h2>
-                    <p>Expert furniture assembly and disassembly service. From IKEA flat-packs to complex office furniture, we handle it all with precision and care.</p>
+                    <h3>Packing & Materials</h3>
+                    <p>Professional packing service with high-quality materials to protect your belongings during transport. We provide expert packing techniques and all necessary materials.</p>
                     <ul class="service-features">
-                        <li>All furniture brands and types</li>
-                        <li>Tools and equipment provided</li>
-                        <li>Careful handling of all components</li>
-                        <li>Cleanup after assembly</li>
-                        <li>Assembly guarantee</li>
-                        <li>Time-efficient service</li>
+                        <li>High-quality packing materials</li>
+                        <li>Expert packing techniques</li>
+                        <li>Fragile item specialists</li>
+                        <li>Custom packing solutions</li>
+                        <li>Inventory management</li>
+                        <li>Labeling and organization</li>
                     </ul>
+                </div>
+                <div class="service-image">
+                    <picture>
+                        <source srcset="service-packing.webp" type="image/webp">
+                        <img src="service-packing.jpg" alt="Professional packing materials and service" loading="lazy">
+                    </picture>
                 </div>
             </div>
 
-            <!-- Recycling & Clearance -->
+            <!-- End-of-Tenancy Cleaning -->
             <div class="service-detail">
-                <div class="service-visual">
-                    <span class="service-icon">♻️</span>
-                    <h3>Recycling & Clearance</h3>
-                </div>
                 <div class="service-content">
-                    <h2>Eco-Friendly Disposal</h2>
-                    <p>Responsible clearance and recycling services for homes and offices. We ensure items are disposed of properly and sustainably wherever possible.</p>
+                    <h3>End-of-Tenancy Cleaning</h3>
+                    <p>Thorough cleaning service to ensure you get your full deposit back. Professional and reliable cleaning that meets landlord requirements.</p>
                     <ul class="service-features">
-                        <li>Environmentally responsible disposal</li>
-                        <li>House and garden clearance</li>
-                        <li>Office equipment removal</li>
-                        <li>Donation to local charities</li>
-                        <li>Proper recycling procedures</li>
-                        <li>Waste transfer notes provided</li>
+                        <li>Deep cleaning service</li>
+                        <li>Deposit guarantee</li>
+                        <li>Same-day completion</li>
+                        <li>Professional equipment</li>
+                        <li>Eco-friendly products</li>
+                        <li>Inspection-ready results</li>
                     </ul>
+                </div>
+                <div class="service-image">
+                    <picture>
+                        <source srcset="service-cleaning.webp" type="image/webp">
+                        <img src="service-cleaning.jpg" alt="Professional end-of-tenancy cleaning service" loading="lazy">
+                    </picture>
                 </div>
             </div>
 
-            <!-- Special Items -->
+            <!-- Additional Services -->
             <div class="service-detail">
-                <div class="service-visual">
-                    <span class="service-icon">🎹</span>
-                    <h3>Special Items Transport</h3>
-                </div>
                 <div class="service-content">
-                    <h2>Specialist Moving Services</h2>
-                    <p>Expert handling of valuable and delicate items including pianos, antiques, artwork, and motorcycles. We have the experience and equipment needed.</p>
+                    <h3>Additional Services</h3>
+                    <p>Comprehensive additional services including refurbishment, electrical work, and specialized moving requirements. We handle all aspects of your relocation needs.</p>
                     <ul class="service-features">
-                        <li>Piano moving specialists</li>
-                        <li>Antique and artwork handling</li>
-                        <li>Motorcycle transport</li>
-                        <li>Specialized packing materials</li>
-                        <li>Extra insurance available</li>
-                        <li>Experienced handling team</li>
+                        <li>Refurbishment services</li>
+                        <li>Electrical work</li>
+                        <li>Custom solutions</li>
+                        <li>Furniture assembly</li>
+                        <li>Handyman services</li>
+                        <li>Specialized equipment</li>
                     </ul>
                 </div>
+                <div class="service-image">
+                    <picture>
+                        <source srcset="service-extras.webp" type="image/webp">
+                        <img src="service-extras.jpg" alt="Additional services including refurbishment and electrical work" loading="lazy">
+                    </picture>
+                </div>
             </div>
+
         </div>
     </section>
 
-    <section class="pricing-banner">
+    <!-- How It Works Timeline -->
+    <section class="how-it-works">
         <div class="container">
-            <h2>Need a Quote?</h2>
-            <p>Get instant pricing with our online calculator or speak directly with our team</p>
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="index.html#calculator" class="btn" style="background: white; color: #FF8A00;">Get Instant Quote</a>
-                <a href="tel:+447456507570" class="btn" style="background: transparent; border: 2px solid white; color: white;">Call 07456 507 570</a>
+            <h2 class="section-title">How It Works</h2>
+            <div class="timeline">
+                <div class="timeline-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Get Your Quote</h3>
+                        <p>Use our instant calculator or call us for a personalized quote based on your specific requirements.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Schedule Your Move</h3>
+                        <p>Choose a convenient date and time. We offer flexible scheduling including weekends and evenings.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Professional Packing</h3>
+                        <p>Our team arrives with all necessary materials and carefully packs your belongings with expert care.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Safe Transport</h3>
+                        <p>Your belongings are transported safely in our fully insured vehicles with GPS tracking.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Unpack & Settle</h3>
+                        <p>We help you unpack and settle into your new space, ensuring everything is exactly where you want it.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- FAQ Accordion -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-accordion">
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq1">
+                        <span>How much does a removal service cost?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq1">
+                        <p>Our pricing depends on the size of your move, distance, and specific requirements. Use our instant quote calculator for an accurate estimate, or call us for a personalized quote. We offer transparent pricing with no hidden fees.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq2">
+                        <span>Do you provide packing materials?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq2">
+                        <p>Yes! We provide all necessary packing materials including boxes, bubble wrap, packing paper, and protective covers. These are included in our service to ensure your belongings are properly protected during transport.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq3">
+                        <span>Are you fully insured?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq3">
+                        <p>Absolutely. We are fully insured and all our team members are DBS-checked. Your belongings are protected throughout the entire moving process, giving you complete peace of mind.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq4">
+                        <span>Can you move on weekends?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq4">
+                        <p>Yes, we offer flexible scheduling including weekends and evenings. We understand that moving often needs to fit around work schedules, so we're available 7 days a week to accommodate your needs.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq5">
+                        <span>Do you offer same-day service?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq5">
+                        <p>Yes, we offer same-day service when available. Contact us as early as possible to check availability. For urgent moves, we'll do our best to accommodate your timeline.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Make Your Move?</h2>
+                <p>Get your instant quote today and experience London's most trusted removal service</p>
+                <div class="cta-buttons">
+                    <a href="index.html#calculator" class="btn btn-primary btn-large">Get Instant Quote</a>
+                    <a href="tel:+447456507570" class="btn btn-secondary btn-large">Call 07456 507 570</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Sticky Button -->
+    <div class="mobile-sticky-btn">
+        <a href="index.html#calculator" class="btn btn-primary">
+            <span class="btn-icon">📋</span>
+            <span>Get Quote</span>
+        </a>
+    </div>
 
     <footer>
         <div class="container">
@@ -242,5 +879,36 @@
             </div>
         </div>
     </footer>
+
+    <!-- FAQ Accordion JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    
+                    // Close all other FAQ items
+                    faqQuestions.forEach(q => {
+                        if (q !== this) {
+                            q.setAttribute('aria-expanded', 'false');
+                            q.nextElementSibling.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current FAQ item
+                    if (isExpanded) {
+                        this.setAttribute('aria-expanded', 'false');
+                        answer.classList.remove('active');
+                    } else {
+                        this.setAttribute('aria-expanded', 'true');
+                        answer.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
