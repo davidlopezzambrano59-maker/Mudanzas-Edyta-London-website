@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maps Test - Minimal</title>
+</head>
+<body>
+    <h1>Address Test</h1>
+    <input type="text" id="pickupAddress" placeholder="Enter pickup address" style="width: 300px; padding: 10px;">
+    <br><br>
+    <input type="text" id="destinationAddress" placeholder="Enter destination address" style="width: 300px; padding: 10px;">
+    <br><br>
+    <div id="miles">Distance will appear here</div>
+    
+    <script>
+        function initMap() {
+            console.log('Google Maps loaded successfully!');
+            
+            // Setup autocomplete
+            const pickup = new google.maps.places.Autocomplete(
+                document.getElementById('pickupAddress'),
+                { componentRestrictions: { country: 'gb' } }
+            );
+            
+            const destination = new google.maps.places.Autocomplete(
+                document.getElementById('destinationAddress'),
+                { componentRestrictions: { country: 'gb' } }
+            );
+            
+            console.log('Autocomplete setup complete!');
+        }
+    </script>
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZi-ygE0rHag90gI-nhvGmnE1GmZj-n-E&libraries=places&callback=initMap"></script>
+</body>
+</html>
+
+
+
+
+

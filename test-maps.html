@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Maps Test</title>
+</head>
+<body>
+    <h1>Testing Google Maps API</h1>
+    <div id="map" style="height: 400px; width: 100%;"></div>
+    
+    <script>
+        function initMap() {
+            console.log('initMap called successfully!');
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: {lat: 51.5074, lng: -0.1278}
+            });
+            console.log('Map created successfully!');
+        }
+        
+        window.onerror = function(msg, url, line) {
+            console.error('JavaScript Error:', msg, 'at line', line);
+            document.body.innerHTML += '<p style="color:red;">Error: ' + msg + '</p>';
+        };
+    </script>
+    
+    <script async defer 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZi-ygE0rHag90gI-nhvGmnE1GmZj-n-E&callback=initMap">
+    </script>
+</body>
+</html>
+
+
+
+
+
