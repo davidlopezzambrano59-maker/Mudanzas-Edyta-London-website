@@ -1,8 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.removalsedytalondon.co.uk/</loc></url>
-  <!-- Examples: add any real pages you have -->
-  <!-- <url><loc>https://www.removalsedytalondon.co.uk/quote</loc></url> -->
-  <!-- <url><loc>https://www.removalsedytalondon.co.uk/services</loc></url> -->
-  <!-- <url><loc>https://www.removalsedytalondon.co.uk/contact</loc></url> -->
+
+  <!-- 🏠 Home page (most important – has the instant quote calculator) -->
+  <url>
+    <loc>https://www.removalsedytalondon.co.uk/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 🚚 Services -->
+  <url>
+    <loc>https://www.removalsedytalondon.co.uk/services</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 🌟 Reviews / Testimonials -->
+  <url>
+    <loc>https://www.removalsedytalondon.co.uk/reviews</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 👥 About Us -->
+  <url>
+    <loc>https://www.removalsedytalondon.co.uk/about</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 📞 Contact -->
+  <url>
+    <loc>https://www.removalsedytalondon.co.uk/contact</loc>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
+
