@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Professional removal services in London - Home removals, office relocations, airport transfers, furniture assembly, and special items transport.">
     <meta name="keywords" content="removals london, moving service, van hire, house removals, office relocation, furniture assembly">
+    <link rel="canonical" href="https://removalsedytalondon.co.uk/services.html" />
     
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
@@ -176,23 +177,34 @@
             font-size: 1.125rem;
         }
 
+        /* Card container */
         .service-image {
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+          border-radius: 1rem;
+          overflow: hidden;
+          box-shadow: 0 10px 25px rgba(0,0,0,.1);
+          transition: transform .3s ease;
+          aspect-ratio: 4 / 3;            /* mobile-friendly shape */
+        } 
+
+        /* Wider screens: a bit wider ratio looks great for vans/team shots */
+        @media (min-width: 768px) {
+          .service-image { aspect-ratio: 16 / 9; }
         }
 
-        .service-image:hover {
-            transform: scale(1.02);
-        }
+        .service-image:hover { transform: scale(1.02); }
 
+        /* Image fills the box, centered */
         .service-image img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;               /* fills, crops edges slightly */
+          object-position: center;         /* adjust per image if needed */
+          display: block;
         }
+
+  
+
+
 
         .btn-outline {
             background: transparent;
@@ -585,14 +597,14 @@
             <div class="service-detail">
                 <div class="service-content">
                     <h3>Residential Removals</h3>
-                    <p>Complete home and flat removal service with professional packing, loading, transport, and unpacking. We handle everything from studio flats to large family homes with care and efficiency.</p>
+                    <p>Moving home is a big step — and we’re here to make it simple. Our team provides a complete home and flat removal service, covering packing, loading, transport, and unpacking with care and precision. Whether it’s a studio flat or a large family house, we handle your move as if it were our own.</p>
                     <ul class="service-features">
-                        <li>Professional packing materials included</li>
-                        <li>Furniture disassembly and reassembly</li>
-                        <li>Fragile items protection</li>
-                        <li>Same-day service available</li>
+                        <li>Professional packing materials provided</li>
+                        <li>Furniture carefully disassembled and reassembled</li>
+                        <li>Extra protection for fragile and valuable items</li>
+                        <li>Same-day moves available on request</li>
                         <li>Fully insured for your peace of mind</li>
-                        <li>No hidden charges or surprises</li>
+                        <li>Transparent pricing - no hidden fees, ever</li>
                     </ul>
                     <a href="index.html#calculator" class="btn btn-outline">Get Quote</a>
                 </div>
@@ -608,14 +620,14 @@
             <div class="service-detail">
                 <div class="service-content">
                     <h3>Office Relocations</h3>
-                    <p>Minimize business downtime with our efficient commercial moving services. We understand the importance of getting your business back up and running quickly.</p>
+                    <p>We help businesses move efficiently, safely, and with minimal downtime. Our office relocation service in London is designed for companies of all sizes — from small offices to large commercial spaces. We plan every detail so your team can get back to work quickly and confidently.</p>
                     <ul class="service-features">
-                        <li>Weekend and evening moves available</li>
-                        <li>IT equipment handling specialists</li>
-                        <li>Document and file organization</li>
-                        <li>Furniture and equipment assembly</li>
-                        <li>Minimal business disruption</li>
-                        <li>Secure transport for sensitive materials</li>
+                        <li>Tailored relocation plans for your business needs</li>
+                        <li>Packing and secure transport of IT and office equipment</li>
+                        <li>Furniture dismantling, relocation, and reassembly</li>
+                        <li>Flexible scheduling — evenings or weekends available</li>
+                        <li>Fully insured, professional movers</li>
+                        <li>Clear communication from start to finish</li>
                     </ul>
                     <a href="index.html#calculator" class="btn btn-outline">Get Quote</a>
                 </div>
@@ -631,13 +643,12 @@
             <div class="service-detail">
                 <div class="service-content">
                     <h3>Man & Van</h3>
-                    <p>Perfect for smaller moves, deliveries, and collections. Quick, efficient, and cost-effective service for when you need reliable transport without the full removal service.</p>
+                    <p>Our Man and Van service is ideal for smaller moves, urgent deliveries, or flexible transport needs. Whether you’re moving furniture, stock, or individual items, our experienced drivers ensure everything arrives safely and on time.</p>
                     <ul class="service-features">
-                        <li>Same-day service available</li>
-                        <li>Competitive hourly rates</li>
-                        <li>Flexible scheduling</li>
-                        <li>Small to medium loads</li>
-                        <li>Quick turnaround times</li>
+                        <li>Quick same-day collections and deliveries</li>
+                        <li>Ideal for small moves, students, or business transport</li>
+                        <li>Affordable hourly rates with a 2-hour minimum</li>
+                        <li>Clean, fully insured vans driven by trained professionals</li>
                         <li>Professional handling</li>
                     </ul>
                     <a href="index.html#calculator" class="btn btn-outline">Get Quote</a>
@@ -654,13 +665,13 @@
             <div class="service-detail">
                 <div class="service-content">
                     <h3>Packing & Materials</h3>
-                    <p>Professional packing service with high-quality materials to protect your belongings during transport. We provide expert packing techniques and all necessary materials.</p>
+                    <p>Proper packing makes all the difference. We supply high-quality packing materials and offer professional packing services to protect your belongings during transit. Our team handles everything from delicate glassware to bulky furniture with expert care</p>
                     <ul class="service-features">
-                        <li>High-quality packing materials</li>
-                        <li>Expert packing techniques</li>
-                        <li>Fragile item specialists</li>
-                        <li>Custom packing solutions</li>
-                        <li>Inventory management</li>
+                        <li>Professional packing and unpacking service</li>
+                        <li>Eco-friendly boxes and wrapping materials</li>
+                        <li>Fragile and high-value item protection</li>
+                        <li>Custom packing for offices or large homes</li>
+                        <li>Optional full-service packing before move day</li>
                         <li>Labeling and organization</li>
                     </ul>
                 </div>
@@ -676,13 +687,13 @@
             <div class="service-detail">
                 <div class="service-content">
                     <h3>End-of-Tenancy Cleaning</h3>
-                    <p>Thorough cleaning service to ensure you get your full deposit back. Professional and reliable cleaning that meets landlord requirements.</p>
+                    <p>Our End of Tenancy Cleaning service in London helps landlords, tenants, and property managers meet professional cleaning standards for check-out or pre-move inspections. We deliver detailed, high-quality cleaning that leaves every property ready for its next occupant.</p>
                     <ul class="service-features">
-                        <li>Deep cleaning service</li>
-                        <li>Deposit guarantee</li>
-                        <li>Same-day completion</li>
-                        <li>Professional equipment</li>
-                        <li>Eco-friendly products</li>
+                        <li>Deep cleaning for kitchens, bathrooms, and all rooms</li>
+                        <li>Carpet vacuuming and hard floor sanitising</li>
+                        <li>Internal window and surface cleaning</li>
+                        <li>Optional oven, fridge, and appliance cleaning</li>
+                        <li>Invoices provided for tenancy or agency records</li>
                         <li>Inspection-ready results</li>
                     </ul>
                 </div>
@@ -698,13 +709,13 @@
             <div class="service-detail">
                 <div class="service-content">
                     <h3>Additional Services</h3>
-                    <p>Comprehensive additional services including refurbishment, electrical work, and specialized moving requirements. We handle all aspects of your relocation needs.</p>
+                    <p>Beyond removals, we offer property improvement and maintenance services to help you upgrade or prepare your space. From electrical installations to bathroom renovations and general refurbishments, our qualified team ensures quality workmanship and lasting results.</p>
                     <ul class="service-features">
-                        <li>Refurbishment services</li>
-                        <li>Electrical work</li>
-                        <li>Custom solutions</li>
-                        <li>Furniture assembly</li>
-                        <li>Handyman services</li>
+                        <li>Electrical wiring, lighting, and appliance installations</li>
+                        <li>Bathroom upgrades and tiling</li>
+                        <li>Painting, decorating, and plastering</li>
+                        <li>Small renovations and repair work</li>
+                        <li>Ideal for landlords and property investors</li>
                         <li>Specialized equipment</li>
                     </ul>
                 </div>
@@ -856,7 +867,7 @@
                             <p style="margin-bottom: 15px; color: #FF8A00; font-style: italic;">"Lift on the way"</p>
                         </div>
                     </div>
-                    <p>London's premier removals service with 10+ years of experience. Professional, reliable, and bilingual moving solutions.</p>
+                    <p>London's leading removals service with 10+ years of experience. Professional, reliable, and bilingual moving solutions.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Contact Info</h3>
@@ -876,7 +887,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Mudanzas Edyta London Limited. All rights reserved. | Fully Insured & DBS Checked | Professional Removals Service</p>
+                <p>&copy; 2025 Mudanzas Edyta London Limited. All rights reserved. | Fully Insured & DBS Checked | Professional Removals Service</p>
             </div>
         </div>
     </footer>
