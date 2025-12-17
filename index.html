@@ -218,9 +218,24 @@
                 <a href="mailto:info@mudanzasedyta-london.com" style="color: white; text-decoration: none;">
                     📧 info@mudanzasedyta-london.com
                 </a>
-                <a href="tel:07462170197" style="color: white; text-decoration: none;">
-                    📞 07462 170197 | 07456507570
+                <a href="tel:07462170197"
+                   style="color: white; text-decoration: none;"
+                   onclick="gtag('event', 'call_click', {
+                     'event_category': 'lead',
+                     'event_label': 'phone_07462170197'
+                   });">
+                   📞 07462 170197
                 </a>
+                &nbsp;|&nbsp;
+                <a href="tel:07456507570"
+                   style="color: white; text-decoration: none;"
+                   onclick="gtag('event', 'call_click', {
+                     'event_category': 'lead',
+                     'event_label': 'phone_07456507570'
+                   });">
+                   07456 507570
+                </a>
+
             </div>
                 <div style="display: flex; gap: 1rem; align-items: center;">
                 <!-- Google Reviews Badge -->
@@ -776,7 +791,13 @@ Our experienced movers handle each job efficiently, so your move is completed qu
                 </div>
                 <div class="footer-section">
                     <h3>Contact Info</h3>
-                    <a href="tel:+447456507570">📞 07456 507 570</a>
+                    <a href="tel:+447456507570">
+                       onclick="gtag('event', 'call_click', {
+                         'event_category': 'lead',
+                         'event_label': 'phone_footer_07456507570'
+                       });">
+                       📞 07456 507 570
+                    </a>
                     <a href="https://wa.me/447456507570">💬 WhatsApp</a>
                     <a href="https://www.bark.com/en/gb/company/mudanzas-edyta-london-limited/Y2G1j/" target="_blank" rel="noopener noreferrer">🔗 Find us on Bark</a>
                     <p>📍 Serving all of London and surrounding areas</p>
