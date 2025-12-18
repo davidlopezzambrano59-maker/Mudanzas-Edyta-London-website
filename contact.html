@@ -193,7 +193,15 @@
                         <div class="contact-card">
                             <div class="contact-icon">💬</div>
                             <h3>WhatsApp</h3>
-                            <p><a href="https://wa.me/447456507570">Message us directly</a></p>
+                            <p>
+                                <a href="https://wa.me/447456507570"
+                                   onclick="gtag('event','whatsapp_click', {
+                                     'event_category':'lead',
+                                     'event_label':'whatsapp_contact_page'
+                                   });">
+                                   Message us directly
+                                </a>
+                            </p>
                             <p>Quick responses guaranteed</p>
                         </div>
                         
@@ -306,7 +314,15 @@
                    📞 Call Now: 07456 507 570
                 </a>
 
-                <a href="https://wa.me/447456507570" class="btn btn-secondary">💬 WhatsApp</a>
+                <a href="https://wa.me/447456507570"
+                   class="btn btn-secondary"
+                   onclick="gtag('event','whatsapp_click', {
+                     'event_category':'lead',
+                     'event_label':'whatsapp_button_secondary'
+                   });">
+                   💬 WhatsApp
+                </a>
+
                 <a href="index.html#calculator" class="btn btn-secondary">📋 Get Quote</a>
             </div>
         </div>
