@@ -11,10 +11,23 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Our Services | Removals, Cleaning, Electrical Work & Renovations">
     <meta property="og:description" content="Complete moving and property services in London: removals, packing, man & van, end of tenancy cleaning, electrical installations and renovations — all in one place.">
-    <meta property="og:url" content="https://mudanzasedyta.com/services">
+    <meta property="og:url" content="https://removalsedytalondon.co.uk/services.html">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚚</text></svg>">
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+
+    <!-- Apple iPhone/iPad icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Android / Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+
+    <!-- Fallback ICO -->
+    <link rel="icon" href="/favicon.ico">
+
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +44,11 @@
 
         /* Hero Section */
         .services-hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('services-hero.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('services-hero.JPG');
+           <img src="services-hero.JPG"
+             alt="Worker unloading boxes from the Luton Van"
+             style="display:none;">
+
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -528,6 +545,66 @@
                 padding: 4rem 0;
             }
         }
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MovingCompany",
+      "@id": "https://removalsedytalondon.co.uk/#movingcompany",
+      "name": "Mudanzas Edyta London Limited",
+      "image": "https://removalsedytalondon.co.uk/images/og-image.png",
+      "logo": "https://removalsedytalondon.co.uk/logo-full.png",
+      "url": "https://removalsedytalondon.co.uk",
+      "telephone": "+447462170197",
+      "alternateName": "Mudanzas Edyta London",
+      "priceRange": "££",
+      "description": "Professional removals company in London offering house and office moves, man & van, packing, end of tenancy cleaning, electrical installations and property renovations. Over 10 years experience, fully insured, DBS checked.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "434A Garratt Lane",
+        "addressLocality": "London",
+        "postalCode": "SW18 4HN",
+        "addressCountry": "GB"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "London"
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday","Tuesday","Wednesday","Thursday",
+          "Friday","Saturday","Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "20:00"
+      }],
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+44746507570",
+        "contactType": "customer service",
+        "areaServed": "GB",
+        "availableLanguage": ["English", "Spanish"]
+      }],
+      "sameAs": [
+        "https://www.facebook.com/removalsmudanzasedytalondon/",
+        "https://www.instagram.com/mudanzasedyta",
+        "https://www.bark.com/en/gb/company/mudanzas-edyta-london-limited/Y2G1j/"
+      ],
+      "serviceType": [
+        "House removals",
+        "Flat removals",
+        "Office removals",
+        "Man and Van",
+        "Packing services",
+        "End of tenancy cleaning",
+        "Furniture assembly",
+        "Electrical installations",
+        "Bathroom renovations",
+        "Property refurbishments"
+      ]
+    }
+    </script>
+
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3B7BE8CRKY"></script>
     <script>
@@ -543,7 +620,7 @@
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">
-                    <img src="logo-full.png" alt="Mudanzas Edyta London - Lift on the way">
+                    <img src="logo-full.png" alt="Mudanzas Edyta London Logo">
                     <div class="logo-text">Mudanzas Edyta London</div>
                 </a>
                 <nav class="main-nav">
@@ -555,7 +632,14 @@
                 </nav>
                 <div class="cta-buttons">
                     <a href="index.html#calculator" class="btn btn-primary">Get Quote</a>
-                    <a href="tel:+447456507570" class="btn btn-secondary">Call 07456 507 570</a>
+                    <a href="tel:+447456507570" 
+                       class="btn btn-secondary"
+                       onclick="gtag('event', 'call_click', {
+                         'event_category': 'lead',
+                         'event_label': 'phone_button_07456507570'
+                       });">
+                       Call 07456 507 570
+                    </a>
                 </div>
             </div>
         </div>
@@ -565,9 +649,15 @@
     <section class="services-hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Professional Removal Services</h1>
-                <p class="hero-subtitle">Comprehensive removal and transport solutions across London with over 10 years of trusted experience. From residential moves to office relocations, we make your transition stress-free.</p>
+                <h1>Removals & Moving Services in London</h1>
+                <p class="hero-subtitle">Comprehensive removal and transport solutions across London with over 10 years of trusted experience. From residential moves to office relocations, we make your transition smooth and well organised.</p>
                 <a href="index.html#calculator" class="btn btn-primary btn-large">Get Instant Quote</a>
+                <p style="margin-top: 1rem;">
+                  <a href="contact.html" style="color: #ffffff; font-weight: 500; text-decoration: underline;">
+                    Prefer to talk? Contact us to discuss your move
+                  </a>
+                </p>
+
                 
                 <!-- Trust Badges -->
                 <div class="trust-badges">
@@ -595,7 +685,7 @@
     <!-- Services Section -->
     <section class="services-section">
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
+            <h2 class="section-title">Our Removals & Property Services in London</h2>
             
             <!-- Residential Removals -->
             <div class="service-detail">
@@ -615,7 +705,7 @@
                 <div class="service-image">
                     <picture>
                         <source srcset="service-residential.webp" type="image/webp">
-                        <img src="service-residential.jpg" alt="Professional residential removal service" loading="lazy">
+                        <img src="service-residential.jpg" alt="Removal team loading furniture into a van during a residential house move in London" loading="lazy">
                     </picture>
                 </div>
             </div>
@@ -638,7 +728,7 @@
                 <div class="service-image">
                     <picture>
                         <source srcset="service-office.webp" type="image/webp">
-                        <img src="service-office.jpg" alt="Professional office relocation service" loading="lazy">
+                        <img src="service-office.jpg" alt="Luton removals van outside an office building in London ready for an office relocation" loading="lazy">
                     </picture>
                 </div>
             </div>
@@ -646,7 +736,7 @@
             <!-- Man & Van -->
             <div class="service-detail">
                 <div class="service-content">
-                    <h3>Man & Van</h3>
+                    <h3>Man & Van Removals</h3>
                     <p>Our Man and Van service is ideal for smaller moves, urgent deliveries, or flexible transport needs. Whether you’re moving furniture, stock, or individual items, our experienced drivers ensure everything arrives safely and on time.</p>
                     <ul class="service-features">
                         <li>Quick same-day collections and deliveries</li>
@@ -660,7 +750,7 @@
                 <div class="service-image">
                     <picture>
                         <source srcset="service-manvan.webp" type="image/webp">
-                        <img src="service-manvan.jpg" alt="Man and van service for small moves" loading="lazy">
+                        <img src="service-manvan.jpg" alt="Man and van service loading bags and luggage into a Luton Van on a London street" loading="lazy">
                     </picture>
                 </div>
             </div>
@@ -682,7 +772,7 @@
                 <div class="service-image">
                     <picture>
                         <source srcset="service-packing.webp" type="image/webp">
-                        <img src="service-packing.jpg" alt="Professional packing materials and service" loading="lazy">
+                        <img src="service-packing.jpg" alt="Removals team loading boxed furniture and bed parts into the van as part of our packing service" loading="lazy">
                     </picture>
                 </div>
             </div>
@@ -704,7 +794,7 @@
                 <div class="service-image">
                     <picture>
                         <source srcset="service-cleaning.webp" type="image/webp">
-                        <img src="service-cleaning.jpg" alt="Professional end-of-tenancy cleaning service" loading="lazy">
+                        <img src="service-cleaning.JPG" alt="Freshly cleaned stainless steel kitchen extractor as part of an end of tenancy cleaning in London" loading="lazy">
                     </picture>
                 </div>
             </div>
@@ -712,7 +802,7 @@
             <!-- Additional Services -->
             <div class="service-detail">
                 <div class="service-content">
-                    <h3>Additional Services</h3>
+                    <h3>Electrical, Bathroom & Renovation Services</h3>
                     <p>Beyond removals, we offer property improvement and maintenance services to help you upgrade or prepare your space. From electrical installations to bathroom renovations and general refurbishments, our qualified team ensures quality workmanship and lasting results.</p>
                     <ul class="service-features">
                         <li>Electrical wiring, lighting, and appliance installations</li>
@@ -726,7 +816,7 @@
                 <div class="service-image">
                     <picture>
                         <source srcset="service-extras.webp" type="image/webp">
-                        <img src="service-extras.jpg" alt="Additional services including refurbishment and electrical work" loading="lazy">
+                        <img src="service-extras.jpg" alt="Worker installing laminated flooring in a hallway as part of property renovation services in London" loading="lazy">
                     </picture>
                 </div>
             </div>
@@ -737,7 +827,7 @@
     <!-- How It Works Timeline -->
     <section class="how-it-works">
         <div class="container">
-            <h2 class="section-title">How It Works</h2>
+            <h2 class="section-title">How Our Removals Service Works</h2>
             <div class="timeline">
                 <div class="timeline-step">
                     <div class="step-number">1</div>
@@ -846,7 +936,20 @@
                 <p>Get your instant quote today and experience London's most trusted removal service</p>
                 <div class="cta-buttons">
                     <a href="index.html#calculator" class="btn btn-primary btn-large">Get Instant Quote</a>
-                    <a href="tel:+447456507570" class="btn btn-secondary btn-large">Call 07456 507 570</a>
+                    <a href="tel:+447456507570" 
+                       class="btn btn-secondary"
+                       onclick="gtag('event', 'call_click', {
+                         'event_category': 'lead',
+                         'event_label': 'phone_button_07456507570'
+                       });">
+                       Call 07456 507 570
+                    </a>
+                    <p style="margin-top: 1.5rem;">
+                      <a href="services.html" style="color: #ffffff; font-weight: 500; text-decoration: underline;">
+                        Browse all removals, cleaning and renovation services
+                      </a>
+                    </p>
+
                 </div>
             </div>
         </div>
@@ -875,8 +978,21 @@
                 </div>
                 <div class="footer-section">
                     <h3>Contact Info</h3>
-                    <a href="tel:+447456507570">📞 07456 507 570</a>
-                    <a href="https://wa.me/447456507570">💬 WhatsApp</a>
+                    <a href="tel:+447456507570"
+                       onclick="gtag('event', 'call_click', {
+                         'event_category': 'lead',
+                         'event_label': 'phone_footer_07456507570'
+                       });">
+                       📞 07456 507 570
+                    </a>                
+                    <a href="https://wa.me/447456507570"
+                       onclick="gtag('event','whatsapp_click', {
+                         'event_category':'lead',
+                         'event_label':'whatsapp_link'
+                       });">
+                      💬 WhatsApp
+                    </a>
+
                     <a href="https://www.bark.com/en/gb/company/mudanzas-edyta-london-limited/Y2G1j/" target="_blank" rel="noopener noreferrer">🔗 Find us on Bark</a>
                     <p>📍 Serving all of London and surrounding areas</p>
                     <p>🕒 Mon-Sun: 8:00 AM - 8:00 PM</p>
