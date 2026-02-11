@@ -4,9 +4,15 @@
   <script>
     (function() {
       var path = window.location.pathname;
+
+      // Remove trailing slash
       if (path.length > 1 && path.endsWith("/")) {
-        var newPath = path.slice(0, -1);
-        window.location.replace(newPath + window.location.search);
+        path = path.slice(0, -1);
+      }
+
+      // If no .html and not root, add .html
+      if (!path.endsWith(".html") && path !== "") {
+        window.location.replace(path + ".html");
       }
     })();
   </script>
@@ -14,3 +20,4 @@
 <body>
 </body>
 </html>
+
