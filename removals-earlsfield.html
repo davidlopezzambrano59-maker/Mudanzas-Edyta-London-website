@@ -82,7 +82,20 @@
         @media (max-width: 768px) {
             .area-page .block-row { grid-template-columns: 1fr; gap: 1.5rem; direction: ltr; }
             .area-page .block-row.reverse { direction: ltr; }
-            .area-page .area-image { aspect-ratio: 16 / 9; }
+            .area-page .block-row .block-content { order: 1; }
+            .area-page .block-row .area-image { order: 2; }
+            .area-page .area-image {
+                aspect-ratio: auto;
+                min-height: 0;
+                margin-top: 14px;
+                display: block;
+            }
+            .area-page .area-image img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
         }
         /* Text-only sections */
         .area-page .text-block { max-width: 100%; }
@@ -122,6 +135,8 @@
                     <img src="logo-full.png" alt="Mudanzas Edyta London Logo">
                     <div class="logo-text">Mudanzas Edyta London</div>
                 </a>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+                <label for="nav-toggle" class="hamburger-btn" aria-label="Toggle menu"><span></span><span></span><span></span></label>
                 <nav class="main-nav">
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="services.html" class="nav-link">Services</a>
