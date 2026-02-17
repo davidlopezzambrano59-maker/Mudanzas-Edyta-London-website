@@ -405,6 +405,17 @@ header {
   color: white;
 }
 
+/* Header CTAs on white background: make Call/phone visible */
+header .cta-buttons .btn-secondary {
+  color: var(--ink);
+  border-color: var(--border);
+}
+header .cta-buttons .btn-secondary:hover {
+  background: var(--border-light);
+  color: var(--ink);
+  border-color: var(--muted);
+}
+
 /* Special buttons */
 .whatsapp-btn {
   background: #25D366;
@@ -787,7 +798,7 @@ footer {
   }
   .nav-toggle { position: absolute; }
   .main-nav {
-    display: none;
+    display: none !important;
     position: absolute;
     top: 100%;
     left: 0;
@@ -803,7 +814,7 @@ footer {
     z-index: 99;
   }
   .nav-toggle:checked ~ .main-nav {
-    display: flex;
+    display: flex !important;
   }
   .main-nav .nav-link,
   .main-nav .nav-dropdown {
