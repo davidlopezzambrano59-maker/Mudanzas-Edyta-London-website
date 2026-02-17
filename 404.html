@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    (function() {
+      var path = window.location.pathname;
+
+      // List of old service URLs to redirect to services.html
+      var servicePages = [
+        "/furniture-currier",
+        "/move-flat-or-apartment",
+        "/pickup-from-store",
+        "/house-removals",
+        "/same-day-delivery",
+        "/office-moves"
+      ];
+
+      // Remove trailing slash
+      if (path.endsWith("/")) {
+        path = path.slice(0, -1);
+      }
+
+      // If matches one of the service pages (with or without .html)
+      for (var i = 0; i < servicePages.length; i++) {
+        if (path === servicePages[i] || path === servicePages[i] + ".html") {
+          window.location.replace("/services.html");
+          return;
+        }
+      }
+
+      // If no .html and not root, try adding .html
+      if (!path.endsWith(".html") && path !== "") {
+        window.location.replace(path + ".html");
+      }
+
+    })();
+  </script>
+</head>
+<body>
+</body>
+</html>
+
+
