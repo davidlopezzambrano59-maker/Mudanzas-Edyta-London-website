@@ -240,7 +240,8 @@ header {
 .nav-dropdown-menu a {
   display: block;
   padding: 0.5rem 1rem;
-  color: var(--ink);
+  color: var(--muted);
+  text-decoration: none;
   font-size: 0.9375rem;
   font-weight: 500;
 }
@@ -816,14 +817,17 @@ footer {
   .nav-toggle:checked ~ .main-nav {
     display: flex !important;
   }
+  .main-nav {
+    gap: 0;
+  }
   .main-nav .nav-link,
   .main-nav .nav-dropdown {
-    padding: 0.6rem 1rem;
+    padding: 0.6rem 1rem !important;
     border-bottom: none;
     border-radius: 0;
   }
   .main-nav .nav-dropdown-toggle {
-    padding: 0.6rem 1rem;
+    padding: 0.6rem 1rem !important;
     border-bottom: none;
     width: 100%;
     text-align: left;
