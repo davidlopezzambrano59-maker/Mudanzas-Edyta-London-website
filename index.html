@@ -412,10 +412,9 @@
                         </div>
                         
                         <div class="input-group">
-                            <label>🚐 Van Size</label>
+                            <label>🚐 Van</label>
                             <select id="vanSize" onchange="calculateQuote()">
-                                <option value="50" selected>Medium Van (£50/hour)</option>
-                                <option value="55">Luton Van - 17.3m³ (£55/hour)</option>
+                                <option value="60" selected>Luton Van - 17.3m³ (£60/hour)</option>
                             </select>
                         </div>
                         
@@ -1491,10 +1490,10 @@ Our experienced movers handle each job efficiently, so your move is completed qu
             
             if (!breakdown || !totalEl) return;
             
-            const vanNames = {40: 'Small Van', 45: 'Medium Van', 50: 'Luton Van'};
+            const vanNames = {60: 'Luton Van (17.3m³)'};
             
             let html = `
-                <div><span>Van (${vanNames[quote.vanSize]}):</span><span>£${quote.vanSize}/hour</span></div>
+                <div><span>Van (${vanNames[quote.vanSize] || 'Luton Van (17.3m³)'}):</span><span>£${quote.vanSize}/hour</span></div>
                 ${quote.loaders > 0 ? `<div><span>Loaders (${quote.loaders} × £25):</span><span>£${quote.loaders * 25}/hour</span></div>` : ''}
                 <div><span>Labour (${quote.billableHours}h):</span><span>£${(quote.baseHourly * quote.billableHours).toFixed(2)}</span></div>
                 <div><span>Distance (${quote.miles} miles):</span><span>£${quote.distanceCharge.toFixed(2)}</span></div>
@@ -1827,7 +1826,7 @@ Our experienced movers handle each job efficiently, so your move is completed qu
             
             if (!summary || !quote) return;
             
-            const vanNames = {40: 'Small Van', 45: 'Medium Van', 50: 'Luton Van'};
+            const vanNames = {60: 'Luton Van (17.3m³)'};
             
             summary.innerHTML = `
                 <h3>📋 Booking Summary</h3>
@@ -1851,7 +1850,7 @@ Our experienced movers handle each job efficiently, so your move is completed qu
             });
 
             
-            const vanNames = {40: 'Small Van', 45: 'Medium Van', 50: 'Luton Van'};
+            const vanNames = {60: 'Luton Van (17.3m³)'};
             
             let message = `🚚 *QUOTE REQUEST - Mudanzas Edyta London Limited*\n\n`;
             message += `📍 *ROUTE*\n`;
@@ -1909,7 +1908,7 @@ Our experienced movers handle each job efficiently, so your move is completed qu
             }
             
             // Create comprehensive booking message
-            const vanNames = {40: 'Small Van', 45: 'Medium Van', 50: 'Luton Van'};
+            const vanNames = {60: 'Luton Van (17.3m³)'};
             
             let message = `🚚 *BOOKING CONFIRMATION - Mudanzas Edyta London Limited*\n\n`;
             message += `👤 *CUSTOMER DETAILS*\n`;

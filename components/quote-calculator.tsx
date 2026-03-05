@@ -11,7 +11,7 @@ import { Label } from "@/components/ui/label";
 import {
   calculateQuote,
   formatCurrency,
-  getVanSizeDisplay,
+  getVanSizeDisplayFromRate,
   type VanSize,
   type QuoteInputs,
   type QuoteBreakdown,
@@ -26,7 +26,7 @@ interface QuoteCalculatorProps {
 
 export function QuoteCalculator({ showTitle = true, className = "" }: QuoteCalculatorProps) {
   const [inputs, setInputs] = useState<QuoteInputs>({
-    vanSize: "medium" as VanSize,
+    vanSize: "large" as VanSize,
     loaders: 1,
     hours: MIN_HOURS,
     miles: 5,
@@ -83,36 +83,15 @@ export function QuoteCalculator({ showTitle = true, className = "" }: QuoteCalcu
             >
               <Label htmlFor="van-size" className="text-lg font-semibold flex items-center gap-2">
                 <Truck className="h-5 w-5 text-brand-primary" />
-                Van Size
+                Van
               </Label>
-              <Select 
-                value={inputs.vanSize} 
-                onValueChange={(value: VanSize) => updateInput("vanSize", value)}
-              >
-                <SelectTrigger id="van-size" className="h-14 text-lg">
-                  <SelectValue placeholder="Select van size" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="small">
-                    <div>
-                      <div className="font-semibold">Small Van</div>
-                      <div className="text-sm text-muted-foreground">Perfect for 1-bedroom moves • £40/hour</div>
-                    </div>
-                  </SelectItem>
-                  <SelectItem value="medium">
-                    <div>
-                      <div className="font-semibold">Medium Van</div>
-                      <div className="text-sm text-muted-foreground">Great for 2-bedroom moves • £45/hour</div>
-                    </div>
-                  </SelectItem>
-                  <SelectItem value="large">
-                    <div>
-                      <div className="font-semibold">Luton Van (17.3m³)</div>
-                      <div className="text-sm text-muted-foreground">Best for 3+ bedrooms • £50/hour</div>
-                    </div>
-                  </SelectItem>
-                </SelectContent>
-              </Select>
+              <div id="van-size" className="h-14 text-lg flex items-center gap-2 px-4 rounded-xl border border-input bg-muted/30">
+                <Truck className="h-5 w-5 text-brand-primary flex-shrink-0" />
+                <div>
+                  <div className="font-semibold">Luton Van (17.3m³)</div>
+                  <div className="text-sm text-muted-foreground">£60/hour</div>
+                </div>
+              </div>
             </motion.div>
 
             <motion.div
@@ -226,7 +205,7 @@ export function QuoteCalculator({ showTitle = true, className = "" }: QuoteCalcu
                 <div className="space-y-4" aria-live="polite" aria-label="Quote breakdown">
                   <div className="space-y-3 text-lg">
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-700">Van ({getVanSizeDisplay(inputs.vanSize)}):</span>
+                      <span className="text-gray-700">Van ({getVanSizeDisplayFromRate(breakdown.vanBaseHourly)}):</span>
                       <span className="font-semibold">{formatCurrency(breakdown.vanBaseHourly)}/hour</span>
                     </div>
                     
@@ -314,6 +293,14 @@ export function QuoteCalculator({ showTitle = true, className = "" }: QuoteCalcu
     </Card>
   );
 }
+
+
+
+
+
+
+
+
 
 
 

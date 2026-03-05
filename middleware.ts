@@ -1,26 +1,14 @@
-// Temporarily disable next-intl middleware to test basic functionality
-import createMiddleware from 'next-intl/middleware';
- 
-export default createMiddleware({
-  // A list of all locales that are supported
-  locales: ['en', 'es'],
- 
-  // Used when no locale matches
-  defaultLocale: 'en'
-});
- 
+import { NextResponse } from 'next/server';
+
+// next-intl middleware disabled to avoid VAR_ORIGINAL_PATHNAME / template variable errors.
+// Root routes (/, /quote) and locale routes (/en, /en/quote, /es, etc.) work without it.
+export function middleware() {
+  return NextResponse.next();
+}
+
 export const config = {
-  // Match only internationalized pathnames
   matcher: [
-    // Enable a redirect to a matching locale at the root
-    '/',
-   
-    // Set a cookie to remember the previous locale for
-    // all requests that have a locale prefix
-    '/(es|en)/:path*',
-   
-    // Enable redirects that add missing locales
-    // (e.g. `/pathnames` -> `/en/pathnames`)
-    '/((?!_next|_vercel|.*\\..*).*)'
-  ]
+    // Skip static files and Next.js internals
+    '/((?!_next|_vercel|favicon|.*\\.).*)',
+  ],
 };

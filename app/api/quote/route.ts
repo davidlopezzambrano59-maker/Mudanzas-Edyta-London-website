@@ -12,7 +12,7 @@ const QuoteRequestSchema = z.object({
   dropoffAddress: z.string().optional(),
   notes: z.string().optional(),
   quoteInputs: z.object({
-    vanSize: z.enum(['small', 'medium', 'large']),
+    vanSize: z.enum(['large']),
     loaders: z.number().min(0).max(3),
     hours: z.number().min(1).max(12),
     miles: z.number().min(0).max(100),
@@ -176,6 +176,14 @@ export async function POST(request: NextRequest) {
     );
   }
 }
+
+
+
+
+
+
+
+
 
 
 

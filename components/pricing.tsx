@@ -11,40 +11,10 @@ export function Pricing() {
 
   const pricingTiers = [
     {
-      name: 'Small Van',
-      vanSize: 'small' as const,
-      price: VAN_BASE_HOURLY.small,
-      description: 'Perfect for 1-bedroom flats, small items, or single room moves',
-      features: [
-        'Up to 8.5m³ capacity',
-        'Professional driver included',
-        'Basic equipment provided',
-        'Ideal for student moves',
-        'City center friendly'
-      ],
-      popular: false,
-      color: 'border-blue-200 bg-blue-50'
-    },
-    {
-      name: 'Medium Van',
-      vanSize: 'medium' as const,
-      price: VAN_BASE_HOURLY.medium,
-      description: 'Great for 2-bedroom homes and medium-sized relocations',
-      features: [
-        'Up to 12m³ capacity',
-        'Professional driver included',
-        'Complete equipment set',
-        'Most popular choice',
-        'Family home moves'
-      ],
-      popular: true,
-      color: 'border-brand-primary bg-brand-primary/5'
-    },
-    {
       name: 'Luton Van (17.3m³)',
       vanSize: 'large' as const,
       price: VAN_BASE_HOURLY.large,
-      description: 'Best for large homes, offices, or multiple rooms',
+      description: 'Best for homes, offices, or multiple rooms',
       features: [
         '17.3m³ capacity',
         'Professional driver included',
@@ -52,8 +22,8 @@ export function Pricing() {
         'Tail lift available',
         'Commercial moves'
       ],
-      popular: false,
-      color: 'border-green-200 bg-green-50'
+      popular: true,
+      color: 'border-brand-primary bg-brand-primary/5'
     }
   ];
 
@@ -96,8 +66,8 @@ export function Pricing() {
           </p>
         </motion.div>
 
-        {/* Main Pricing Tiers */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        {/* Main Pricing Tier - Luton only */}
+        <div className="grid md:grid-cols-1 max-w-md mx-auto gap-8 mb-16">
           {pricingTiers.map((tier, index) => (
             <motion.div
               key={tier.name}
@@ -222,6 +192,14 @@ export function Pricing() {
     </section>
   );
 }
+
+
+
+
+
+
+
+
 
 
 

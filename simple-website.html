@@ -361,11 +361,9 @@
                 <div class="calc-grid">
                     <div class="calc-inputs">
                         <div class="input-group">
-                            <label>🚐 Van Size</label>
+                            <label>🚐 Van</label>
                             <select id="vanSize" onchange="calculateQuote()">
-                                <option value="40">Small Van (£40/hour)</option>
-                                <option value="45" selected>Medium Van (£45/hour)</option>
-                                <option value="50">Luton Van - 17.3m³ (£50/hour)</option>
+                                <option value="60" selected>Luton Van - 17.3m³ (£60/hour)</option>
                             </select>
                         </div>
                         
@@ -554,7 +552,7 @@
                 return;
             }
             
-            const vanNames = {40: 'Small Van', 45: 'Medium Van', 50: 'Luton Van (17.3m³)'};
+            const vanNames = {60: 'Luton Van (17.3m³)'};
             
             let message = `🚚 *QUOTE REQUEST - Mudanzas Edyta London*\n\n`;
             message += `📋 *QUOTE BREAKDOWN*\n`;

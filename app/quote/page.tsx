@@ -21,7 +21,7 @@ import RouteMilesMap from '@/components/RouteMilesMap';
 
 export default function QuotePage() {
   const [miles, setMiles] = useState<number>(0);
-  const [vanSize, setVanSize] = useState<number>(45);
+  const [vanSize, setVanSize] = useState<number>(60);
   const [loaders, setLoaders] = useState<number>(1);
   const [hours, setHours] = useState<number>(2);
   const [totalCost, setTotalCost] = useState<number>(0);
@@ -92,15 +92,9 @@ export default function QuotePage() {
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     🚐 Van Size
                   </label>
-                  <select
-                    value={vanSize}
-                    onChange={(e) => setVanSize(Number(e.target.value))}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
-                  >
-                    <option value={40}>Small Van (£40/hour)</option>
-                    <option value={45}>Medium Van (£45/hour)</option>
-                    <option value={50}>Luton Van - 17.3m³ (£50/hour)</option>
-                  </select>
+                  <div className="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50">
+                    Luton Van - 17.3m³ (£60/hour)
+                  </div>
                 </div>
 
                 {/* Number of Loaders */}
@@ -197,7 +191,7 @@ export default function QuotePage() {
 Distance: ${miles} miles
 
 🚐 SERVICE DETAILS
-Van: ${vanSize === 40 ? 'Small' : vanSize === 45 ? 'Medium' : 'Luton'} Van
+Van: Luton Van
 Loaders: ${loaders}
 Duration: ${Math.max(2, hours)} hours
 

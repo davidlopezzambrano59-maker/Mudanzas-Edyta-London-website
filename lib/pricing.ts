@@ -1,8 +1,6 @@
-// Pricing constants - easy to edit for business updates
+// Pricing constants - Luton van only at £60/hr
 export const VAN_BASE_HOURLY = {
-  small: 40,
-  medium: 45,
-  large: 50, // Luton van
+  large: 60, // Luton van
 } as const;
 
 export const LOADER_HOURLY = 25;
@@ -75,23 +73,24 @@ export function formatCurrency(amount: number): string {
 }
 
 /**
- * Get van size display name
+ * Get van size display name (Luton only)
  */
-export function getVanSizeDisplay(vanSize: VanSize): string {
-  const displayNames = {
-    small: 'Small Van',
-    medium: 'Medium Van',
-    large: 'Luton Van (17.3m³)',
-  };
-  return displayNames[vanSize];
+export function getVanSizeDisplay(vanSize: VanSize | number): string {
+  if (vanSize === 'large' || vanSize === 60) return 'Luton Van (17.3m³)';
+  return 'Luton Van (17.3m³)';
+}
+
+/** Get van label from hourly rate (keeps quote breakdown in sync with price) */
+export function getVanSizeDisplayFromRate(vanBaseHourly: number): string {
+  return 'Luton Van (17.3m³)';
 }
 
 /**
- * Get minimum quote for display (Small van + driver, 2 hours)
+ * Get minimum quote for display (Luton + driver, 2 hours)
  */
 export function getMinimumQuote(): string {
   const minQuote = calculateQuote({
-    vanSize: 'small',
+    vanSize: 'large',
     loaders: 0,
     hours: MIN_HOURS,
     miles: 0,

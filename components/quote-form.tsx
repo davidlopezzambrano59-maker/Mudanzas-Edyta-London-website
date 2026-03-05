@@ -28,7 +28,7 @@ type QuoteFormSchema = z.infer<typeof quoteFormSchema>;
 export function QuoteForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [quoteInputs, setQuoteInputs] = useState<QuoteInputs>({
-    vanSize: "medium" as VanSize,
+    vanSize: "large" as VanSize,
     loaders: 1,
     hours: 2,
     miles: 5,
@@ -282,6 +282,14 @@ export function QuoteForm() {
     </div>
   );
 }
+
+
+
+
+
+
+
+
 
 
 

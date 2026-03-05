@@ -6,11 +6,9 @@ test.describe('Quote Calculator', () => {
   });
 
   test('calculates quote correctly for requirements test case', async ({ page }) => {
-    // Test case from requirements: large van, 2 loaders, 2 hours, 25 miles = £237.50
+    // Luton van £60/hr, 2 loaders, 2 hours, 25 miles = £257.50
     
-    // Select van size
-    await page.getByRole('combobox', { name: /van size/i }).click();
-    await page.getByRole('option', { name: /luton van/i }).click();
+    // Van is fixed to Luton - no selection needed
     
     // Select loaders
     await page.getByRole('combobox', { name: /loaders/i }).click();
@@ -22,11 +20,11 @@ test.describe('Quote Calculator', () => {
     // Set miles
     await page.getByLabelText(/distance/i).fill('25');
     
-    // Wait for calculation and check breakdown
-    await expect(page.getByText('£100/hour')).toBeVisible(); // Base hourly rate: 50 + (2*25)
-    await expect(page.getByText('£200')).toBeVisible(); // Labour cost: 100 * 2
-    await expect(page.getByText('£37.50')).toBeVisible(); // Distance charge: 25 * 1.5
-    await expect(page.getByText('£237.50')).toBeVisible(); // Total
+    // Wait for calculation and check breakdown (60 + 2*25 = 110/hr, 110*2 = 220, 25*1.5 = 37.50, total 257.50)
+    await expect(page.getByText('£110/hour')).toBeVisible();
+    await expect(page.getByText('£220')).toBeVisible(); // Labour: 110 * 2
+    await expect(page.getByText('£37.50')).toBeVisible(); // Distance charge
+    await expect(page.getByText('£257.50')).toBeVisible(); // Total
   });
 
   test('applies 2-hour minimum correctly', async ({ page }) => {
@@ -52,10 +50,7 @@ test.describe('Quote Calculator', () => {
   });
 
   test('WhatsApp URL contains correct quote details', async ({ page }) => {
-    // Set test values
-    await page.getByRole('combobox', { name: /van size/i }).click();
-    await page.getByRole('option', { name: /luton van/i }).click();
-    
+    // Van is fixed to Luton
     await page.getByRole('combobox', { name: /loaders/i }).click();
     await page.getByRole('option', { name: /2 loaders/i }).click();
     
@@ -84,17 +79,8 @@ test.describe('Quote Calculator', () => {
   });
 
   test('calculator updates in real-time', async ({ page }) => {
-    // Change van size and verify immediate update
-    await page.getByRole('combobox', { name: /van size/i }).click();
-    await page.getByRole('option', { name: /small van/i }).click();
-    
-    await expect(page.getByText('£40/hour')).toBeVisible();
-    
-    // Change to large van
-    await page.getByRole('combobox', { name: /van size/i }).click();
-    await page.getByRole('option', { name: /luton van/i }).click();
-    
-    await expect(page.getByText('£50/hour')).toBeVisible();
+    // Luton van only - verify rate is shown
+    await expect(page.getByText(/£60\/hour/)).toBeVisible();
   });
 
   test('accessibility: calculator has proper ARIA labels', async ({ page }) => {
@@ -108,12 +94,20 @@ test.describe('Quote Calculator', () => {
   test('mobile responsive design', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 }); // iPhone SE
     
-    // Calculator should still be usable on mobile
-    await expect(page.getByRole('combobox', { name: /van size/i })).toBeVisible();
+    // Calculator should still be usable on mobile (Luton van shown, no combobox)
+    await expect(page.getByText(/luton van/i)).toBeVisible();
     await expect(page.getByLabelText(/estimated hours/i)).toBeVisible();
     await expect(page.getByRole('button', { name: /book.*whatsapp/i })).toBeVisible();
   });
 });
+
+
+
+
+
+
+
+
 
 
 
