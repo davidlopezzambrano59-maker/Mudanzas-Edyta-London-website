@@ -22,8 +22,8 @@ export default function SiteHeader() {
             gap: '1rem'
           }}>
             <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-              <a href="mailto:info@mudanzasedyta-london.com" style={{ color: 'white', textDecoration: 'none' }}>
-                📧 info@mudanzasedyta-london.com
+              <a href="mailto:info@removalsedytalondon.co.uk" style={{ color: 'white', textDecoration: 'none' }}>
+                📧 info@removalsedytalondon.co.uk
               </a>
               <a href="tel:07462170197" style={{ color: 'white', textDecoration: 'none' }}>
                 📞 07462 170197

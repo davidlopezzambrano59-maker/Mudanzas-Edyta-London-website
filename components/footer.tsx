@@ -218,7 +218,7 @@ export function Footer() {
             "description": "Professional removals and moving services in London with 10+ years experience. Bilingual English/Spanish service.",
             "url": "https://mudanzasedytalondon.com",
             "telephone": "+447456507570",
-            "email": "info@mudanzasedytalondon.com",
+            "email": "info@removalsedytalondon.co.uk",
             "areaServed": [
               {
                 "@type": "City",
@@ -270,6 +270,14 @@ export function Footer() {
     </footer>
   );
 }
+
+
+
+
+
+
+
+
 
 
 
