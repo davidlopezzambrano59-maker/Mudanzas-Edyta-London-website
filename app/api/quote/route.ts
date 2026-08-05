@@ -149,7 +149,7 @@ export async function POST(request: NextRequest) {
     // Send business notification
     await resend.emails.send({
       from: 'Website <quotes@mudanzasedytalondon.com>',
-      to: ['info@removalsedytalondon.co.uk'], // Business email
+      to: ['edytalondon@gmail.com'], // Business email
       subject: `New Quote Request - ${formatCurrency(breakdown.total)} from ${name}`,
       html: businessEmailHtml,
     });

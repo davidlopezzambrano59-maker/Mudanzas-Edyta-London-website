@@ -29,7 +29,7 @@ Simply upload all files to your web server root directory. No build process requ
 
 ### 📞 **Contact:**
 - **Phone:** 07462 170197
-- **Email:** info@removalsedytalondon.co.uk
+- **Email:** edytalondon@gmail.com
 - **WhatsApp:** Available for instant booking
 
 ---

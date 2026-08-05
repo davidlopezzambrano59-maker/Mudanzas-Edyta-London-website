@@ -22,8 +22,8 @@ export default function SiteHeader() {
             gap: '1rem'
           }}>
             <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-              <a href="mailto:info@removalsedytalondon.co.uk" style={{ color: 'white', textDecoration: 'none' }}>
-                📧 info@removalsedytalondon.co.uk
+              <a href="mailto:edytalondon@gmail.com" style={{ color: 'white', textDecoration: 'none' }}>
+                📧 edytalondon@gmail.com
               </a>
               <a href="tel:07462170197" style={{ color: 'white', textDecoration: 'none' }}>
                 📞 07462 170197
