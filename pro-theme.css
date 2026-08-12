@@ -816,6 +816,9 @@ footer {
   }
   .nav-toggle:checked ~ .main-nav {
     display: flex !important;
+    max-height: calc(100vh - 4.5rem);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .main-nav .nav-link,
   .main-nav .nav-dropdown {
