@@ -1974,6 +1974,13 @@ Our experienced movers handle each job efficiently, so your move is completed qu
                 alert('Please fill in all required fields.');
                 return;
             }
+
+            gtag('event', 'whatsapp_full_booking', {
+                'event_category': 'lead',
+                'event_label': 'whatsapp_booking_form',
+                'value': quote.total,
+                'currency': 'GBP'
+            });
             
             // Create comprehensive booking message
             const vanNames = {60: 'Luton Van (17.3m³)'};
