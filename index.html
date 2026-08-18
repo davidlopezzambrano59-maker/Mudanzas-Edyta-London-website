@@ -1912,9 +1912,11 @@ Our experienced movers handle each job efficiently, so your move is completed qu
                 alert('Please calculate a quote first!');
                 return;
             }
-            gtag('event', 'whatsapp_click', {
+            gtag('event', 'whatsapp_quick_quote', {
                 'event_category': 'lead',
                 'event_label': 'whatsapp_booking_button'
+                'value': quote.total,
+                'currency': 'GBP'
             });
 
             
