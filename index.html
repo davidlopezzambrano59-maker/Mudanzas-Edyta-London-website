@@ -41,11 +41,16 @@
       "@context": "https://schema.org",
       "@type": "MovingCompany",
       "name": "Mudanzas Edyta London Limited",
-      "@id": "https://removalsedytalondon.co.uk/#business",
+      "legalName": "Mudanzas Edyta London Limited",
+      "@id": "https://removalsedytalondon.co.uk/#organization",
       "image": "https://removalsedytalondon.co.uk/images/og-image.png",
-      "logo": "https://removalsedytalondon.co.uk/logo-full.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://removalsedytalondon.co.uk/logo-full.png"
+      },
       "url": "https://removalsedytalondon.co.uk",
       "telephone": "+447462170197",
+      "email": "edytalondon@gmail.com",
       "alternateName": "Mudanzas Edyta London",
       "description": "Professional removals company in London offering house and office moves, man & van, packing, end of tenancy cleaning, electrical installations and property renovations. Over 10 years experience, fully insured, DBS checked.",
       "address": {
@@ -56,10 +61,19 @@
         "postalCode": "SM4 6LJ",
         "addressCountry": "GB"
       },
-      "areaServed": {
-        "@type": "City",
-        "name": "London"
-      },
+      "areaServed": [
+        { "@type": "Place", "name": "Wimbledon" },
+        { "@type": "Place", "name": "Mitcham" },
+        { "@type": "Place", "name": "Morden" },
+        { "@type": "Place", "name": "Balham" },
+        { "@type": "Place", "name": "Tooting" },
+        { "@type": "Place", "name": "Wandsworth" },
+        { "@type": "Place", "name": "Streatham" },
+        { "@type": "Place", "name": "Sutton" },
+        { "@type": "Place", "name": "Earlsfield" },
+        { "@type": "Place", "name": "Colliers Wood" },
+        { "@type": "Place", "name": "Raynes Park" }
+      ],
       "openingHoursSpecification": [{
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": [
@@ -87,8 +101,10 @@
       ],
 
       "sameAs": [
-        "https://www.facebook.com/removalsmudanzasedytalondon/",
+        "https://maps.app.goo.gl/erhshY6pn562UyzJA",
+        "https://www.facebook.com/share/16FuwYqeAx/?mibextid=wwXIfr",
         "https://www.instagram.com/mudanzasedyta",
+        "https://www.linkedin.com/in/mudanzasedytalondon/",
         "https://www.bark.com/en/gb/company/mudanzas-edyta-london-limited/Y2G1j/"
       ],
       "makesOffer": [
